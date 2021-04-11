@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+ 
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color:rgb(218, 214, 218);
+    display: flex;
+    align-items: center;      
+    justify-content: center;
+    min-height:100vh;
+    margin:0;
+}
+
+.container {
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0;
+    width:400px;
+
+}
+
+h2 {
+    text-align: center;
+    margin-top:0px;
+}
+ 
+input {
+    border-radius: 5px
+}
+
+.form-control {
+    margin-bottom: 10px ;
+    padding-bottom: 20px;
+    position:relative;
+
+
+}
+
+.form {
+    padding:30px 40px; 
+}
+
+.form-control label {
+    display:block;
+    color:darkslategray;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border-radius: 5px;
+    border: 2px solid  gainsboro;
+    display:block;
+    width: 100%;
+    padding:5px;
+    font-size: 15px;
+    
+}
+
+.form-control  input:focus {
+    outline:0px;
+    border-color:grey;    
+}
+
+button {
+    font-size: 16px;
+    margin-top: 0px;
+}
