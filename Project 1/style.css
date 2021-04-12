@@ -43,7 +43,8 @@ h2 {
 }
 
 .form-control input {
-    border: 2px solid #ecf0f1;
+    border: 20px solid #ecf0f1;
+    border-color: red;
     border-radius: 5px;
     display:block;
     width:100%;
