@@ -16,7 +16,7 @@ body {
     align-items: center;      
     justify-content: center;
     min-height:100vh;
-    margin:0;
+
 }
 
 .container {
@@ -25,11 +25,17 @@ body {
     box-shadow: 0 5px 2px 0 navy;
     width:400px;
 
+
 }
 
 h2 {
+    margin: 0px;
+    padding: 0px;
     text-align: center;
-    margin-top:0px;
+}
+h3 {
+    text-align: center;
+    margin-bottom:5px;
 }
  
 input {
@@ -37,21 +43,20 @@ input {
 }
 
 .form-control {
-    margin-bottom: 10px ;
+    margin-bottom: 5px ;
     padding-bottom: 20px;
     position:relative;
-
-
 }
 
 .form {
-    padding:30px 40px; 
+    padding:15px 40px; 
 }
 
 .form-control label {
     display:block;
     color:darkslategray;
     margin-bottom: 5px;
+    margin-top:0px
 }
 
 .form-control input {
@@ -61,7 +66,6 @@ input {
     width: 100%;
     padding:5px;
     font-size: 15px;
-    
 }
 
 .form-control  input:focus {
@@ -106,3 +110,48 @@ button {
     padding: 5px;
     width: 100%;
 }
+
+/* //////////////ICONs TESTING//////////// */
+.icons-container {
+    display:flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+} 
+.fb-container,.google-container,.yahoo-container {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    box-sizing: border-box;
+    margin: 0px 5px;
+    padding:5px;
+    background-color: #3b5998 ;
+    width: 60px;
+    height: 60px; 
+    border-radius: 25px 10px;  
+    box-shadow: 1px 5px 1px  #454545;
+    justify-content:center;
+}
+.google-container{
+    background-color: #BB001B ;
+}
+
+.yahoo-container{
+    background-color: #720e9e ;
+}
+
+.fb, .google, .yahoo {
+
+    font-size: 40px;
+    color:white;
+    padding: 10px;
+    align-items: center;
+    justify-content:center;
+} 
+
+.fb-container:hover,.google-container:hover,.yahoo-container:hover { 
+    border-radius: 50px 50px;
+    padding: 8px;
+} 
