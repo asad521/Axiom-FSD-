@@ -178,6 +178,7 @@ input {
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
+    margin-top: 10px;
     color: #000;
     background-color: #fff;
     border: 2px solid black;
