@@ -1,0 +1,44 @@
+body {
+    background-color: blueviolet;
+
+}
+
+h1 {
+    font-size:2.5rem;
+    line-height: 1.5;
+    letter-spacing:0.5rem;
+    color:whitesmoke;
+    text-align: center;
+
+}
+
+
+.container {
+    /* border: 2px solid red; */
+    height: 400px;
+    position:absolute;
+    width:70%;
+    left:50%;
+    top:50%;
+    transform: translate(-50% ,-50%);
+    background-image: url(https://images.pexels.com/photos/2923277/pexels-photo-2923277.jpeg?cs=srgb&dl=pexels-dids-2923277.jpg&fm=jpg);
+    background-size:100% 100%;
+    box-shadow: 1px 3px 20px black;
+    animation: slider 9s infinite linear;
+}
+
+@keyframes slider {
+    0%  {    background-image: url(https://images.pexels.com/photos/2923277/pexels-photo-2923277.jpeg?cs=srgb&dl=pexels-dids-2923277.jpg&fm=jpg);
+            box-shadow: 1px 3px 20px rgb(7, 7, 7);
+           
+    }
+    35% {    background-image: url(https://images.pexels.com/photos/7346633/pexels-photo-7346633.jpeg?cs=srgb&dl=pexels-koolshooters-7346633.jpg&fm=jpg);
+        box-shadow: 1px 3px 20px rgb(216, 94, 135);
+
+    }
+    75% {    background-image: url(https://images.pexels.com/photos/15286/pexels-photo.jpg?cs=srgb&dl=pexels-luis-del-r%C3%ADo-15286.jpg&fm=jpg);
+             box-shadow: 1px 3px 20px green;
+
+    }
+    
+}
