@@ -24,11 +24,10 @@ body {
 .slides input {
     display:none; 
 }
+ .slide {
+     transition:2s;
+ }
 
-.slide {
-    width:20%;
-    transition:2s;
-}
 
 .slide img {
     width :800px;
