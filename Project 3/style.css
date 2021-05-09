@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Slabo 27px', serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    max-height: 100vh;
+    flex-direction: column;
+    background-color: #6666;
+}
+
+h1 {
+    color:rgb(79, 252, 10);
+}
+
+.screen {
+ cursor: pointer;
+ width: 35%;
+ background-color:  rgb(214, 28, 28) !important;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+}
+
+@media (max-width:800px) {
+    .screen,
+    .controls {
+        width:90%;
+    }
+    
+}
+
+.controls {
+    background-color: rgb(151, 144, 144);
+    color:white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width:35%;
+    display: flex;
+    justify-content:flex;
+    align-items:center;
+    padding: 10px;
+}
+input {
+    width: 100%;
+    margin-left:1px;
+}
+
+.controls .btn {
+
+    border:0;
+    background-color:transparent;
+    cursor:pointer;
+}
+
+i {
+    margin-right:2px;
+}
+
+ .controls .fa-play {
+    background:rgb(189, 11, 11);
+
+}
+
+.controls .fa-stop {
+    background:rgb(118, 189, 11);
+
+} 
+.controls .fa-pause {
+    background:rgb(255, 255, 255);
+
+}  
+
+
+
+
+
+
+
+.timespan {
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    margin-left:5px;
+    font-size: 1.2rem;
+    
+}
+
+

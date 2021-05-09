@@ -15,7 +15,7 @@ body {
 .bg {
 }
 .bg > img {
-  height: 600px;
+  height: 400px;
   width: 100%;
   align-content: top;
   margin:0px;
@@ -31,7 +31,7 @@ body {
 .movie-container{
     /* border:3px solid yellowgreen; */
     display: flex;
-    overflow: hidden;
+    overflow:  hidden;
     align-content: center;
     justify-content: center;
     margin: 5px; 
@@ -59,7 +59,6 @@ body {
       animation: moveAcross  10s linear infinite;
       animation-delay: -10s;
       animation-fill-mode:forwards;
-      /* border:1px solid red;    */
       margin:5px;
       padding:5px;
 }

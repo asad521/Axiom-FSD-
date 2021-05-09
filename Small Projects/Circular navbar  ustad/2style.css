@@ -1,0 +1,165 @@
+ * {
+     box-sizing: border-box;
+     padding:0;
+     margin:0;
+ }
+body {
+    background-color:rgb(236, 75, 102);
+    overflow:show;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+}
+
+.navbar {
+    width:100px;
+    height:100px;
+    line-height:100px;
+    border-radius:50%;
+    background:rgb(53, 0, 177);
+    text-align:center;
+    position:relative;
+    color:white;
+
+} 
+
+.navbar .menu {
+    line-height:0;
+    list-style-type: none;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    border-radius: 50%;
+    z-index:1; 
+    transition:transform 1.4s 0.07s;
+    transform:scale(0);
+    z-index:-1;
+
+     /* cursor:default; */
+
+} 
+
+ .navbar:hover .menu {
+    transition:transform 0.4s 0.08s, z-index 0s 0.5s;
+    transform:scale(1);
+    z-index:1;
+
+} 
+
+.navbar .menu li a {
+    width:45px;
+    height:45px;
+    line-height:45px;
+    border-radius:50%;
+    position:absolute;
+    font-size: 100%;
+    color:#ffffff;
+    transition:1s;
+    background-color: blue;;
+
+}
+
+.navbar .menu li {
+    position:absolute;
+    transition:1s;
+    left:20px;
+    top:10%; 
+    transform-origin: 100px 100px;
+    background:rgb(167, 3, 218);
+    border-radius:50%; 
+}
+
+
+
+.navbar:hover .menu li {
+    left:-55px;
+    top:-55px; 
+
+}  
+
+
+
+.navbar:hover .menu li:nth-child(1) {
+    transition-delay:.02s;
+    transform: rotate(45deg);
+} 
+
+ .navbar:hover .menu li:nth-child(1) a{
+    transition-delay:0.04s;
+    transform: rotate(-45deg);
+
+} 
+
+.navbar:hover .menu li:nth-child(2) {
+    transition-delay:.04s;
+    transform: rotate(90deg);
+} 
+
+ .navbar:hover .menu li:nth-child(2) a{
+    transition-delay:0.04s;
+    transform: rotate(-90deg);
+
+} 
+
+.navbar:hover .menu li:nth-child(3) {
+    transition-delay:.06s;
+    transform: rotate(135deg);
+} 
+
+ .navbar:hover .menu li:nth-child(3) a{
+    transition-delay:0.04s;
+    transform: rotate(-135deg);
+
+} 
+
+.navbar:hover .menu li:nth-child(4) {
+    transition-delay:.08;
+    transform: rotate(180deg);
+} 
+
+ .navbar:hover .menu li:nth-child(4) a{
+    transition-delay:0.04s;
+    transform: rotate(-180deg);
+
+} 
+
+.navbar:hover .menu li:nth-child(5) {
+    transition-delay:.1;
+    transform: rotate(225deg);
+} 
+
+ .navbar:hover .menu li:nth-child(5) a{
+    transition-delay:0.04s;
+    transform: rotate(-225deg);
+
+} 
+
+
+.navbar:hover .menu li:nth-child(6) {
+    transition-delay:.2s;
+    transform: rotate(270deg);
+} 
+
+ .navbar:hover .menu li:nth-child(6) a{
+    transition-delay:0.04s;
+    transform: rotate(-270deg);
+
+} 
+
+
+.navbar:hover .menu li:nth-child(7) {
+    transition-delay:.3s;
+    transform: rotate(315deg);
+} 
+
+ .navbar:hover .menu li:nth-child(7) a{
+    transition-delay:0.04s;
+    transform: rotate(-315deg);
+
+} 
+
+

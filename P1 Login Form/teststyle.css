@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ :root {
+    --success-color:green;
+    --error-color  : orangered;
+}
+
+ 
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color:rgb(218, 214, 218);
+    display: flex;
+    align-items: center;      
+    justify-content: center;
+    min-height:100vh;
+
+}
+
+.container {
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0 5px 2px 0 navy;
+    width:400px;
+
+
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    margin-bottom:5px;
+}
+ 
+input {
+    border-radius: 5px
+}
+
+.form-control {
+    margin-bottom: 5px ;
+    padding-bottom: 20px;
+    position:relative;
+}
+
+.form {
+    padding:15px 40px; 
+}
+
+.form-control label {
+    display:block;
+    color:darkslategray;
+    margin-bottom: 5px;
+    margin-top:0px
+}
+
+.form-control input {
+    border-radius: 5px;
+    border: 2px solid  gainsboro;
+    display:block;
+    width: 100%;
+    padding:5px;
+    font-size: 15px;
+}
+
+.form-control  input:focus {
+    outline:0px;
+    border-color:grey;    
+}
+
+
+
+.form-control.success input {
+    outline:0px;
+    border-color: var(--success-color)
+
+}
+
+.form-control.error input {
+    outline:0px;
+    border-color: var(--error-color)
+
+}
+
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-control small {
+    color:var(--error-color);
+    position:absolute;
+    bottom:0;
+    left:0;
+    visibility:hidden;
+}
+
+button {
+    cursor:pointer; 
+    background-color: navy;
+    color:paleturquoise;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 0px;
+    padding: 5px;
+    width: 100%;
+}
+
+/* //////////////ICONs TESTING//////////// */
+.icons-container {
+    display:flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+} 
+.fb-container,.google-container,.yahoo-container {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    box-sizing: border-box;
+    margin: 0px 5px;
+    padding:5px;
+    background-color: #3b5998 ;
+    width: 60px;
+    height: 60px; 
+    border-radius: 25px 10px;  
+    box-shadow: 1px 5px 1px  #454545;
+    justify-content:center;
+}
+.google-container{
+    background-color: #BB001B ;
+}
+
+.yahoo-container{
+    background-color: #720e9e ;
+}
+
+.fb, .google, .yahoo {
+
+    font-size: 40px;
+    color:white;
+    padding: 10px;
+    align-items: center;
+    justify-content:center;
+} 
+
+.fb-container:hover,.google-container:hover,.yahoo-container:hover { 
+    border-radius: 50px 50px;
+    padding: 8px;
+} 
