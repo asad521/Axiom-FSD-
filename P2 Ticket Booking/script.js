@@ -24,6 +24,7 @@ ticketContainer.addEventListener('click',function(e){
 movieSelector.addEventListener('change',function(e){
     show_price();
     storeDataLocal();
+    console.log(a);
 })
 
 reset.addEventListener('click', function(e){
