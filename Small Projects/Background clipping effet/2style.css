@@ -295,3 +295,101 @@ background-color: rgb(0, 0, 0 ,0.5);
 
 /* ticket css end */
 
+/* media player css start here */
+.mediaPlayer {
+    /* position:fixed; */
+    /* display:absolute; */
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    width:40rem;
+    height:20rem;
+    background-color:transparent;
+    /* top:50%;
+    left:50%; */
+    /* transform:translate(-50%, -50%); */
+    z-index:1;
+    opacity:1;
+}
+
+.mediaPlayer h1 {
+    color:white;
+    background:rgb(0,0,0,.5);
+    width:100%;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.mediaPlayerScreen {
+    width:100%;
+    cursor:pointer;
+}
+.controls {
+    background:rgb(0,0,0,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    width:100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.progress {
+    width:100%;
+
+}
+
+.fa.fa-play ,.fa.fa-stop, .fa.fa-pause {
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    line-height: 55px;
+    text-align:center;
+    font-size:35px;
+    background:transparent  ;
+    text-shadow:1px 2px 0px black;
+
+}
+
+
+
+.fa.fa-play  {
+    background:#05c905;
+}
+
+.fa.fa-stop  {
+    background:rgb(156, 19, 1);
+}
+
+.fa.fa-pause  {
+    background:rgba(0, 158, 8, 0.295);
+    
+}
+
+
+
+
+@media (max-width:800px) {
+    .screen,.control {
+        width:60%;
+    }
+}
+
+.controls .btn {
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:white;
+    padding:4px;
+}
+
+
+
+.timestamp {
+    padding:3px;
+    cursor:pointer;
+}
+
+/* media player css end here */

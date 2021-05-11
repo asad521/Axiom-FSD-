@@ -14,7 +14,6 @@ const ticket=document.getElementById("ticket");
 // let  c=document.querySelectorAll('.fa.fa-youtube');
 let  c=document.querySelectorAll('.fa.fa-youtube');
 
-
 console.log(typeof c);
 console.log(c);
 c.forEach(myfunction);

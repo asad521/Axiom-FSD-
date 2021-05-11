@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    background-color:blueviolet;
+    color:rgb(230, 230, 230);
+    font-family: 'Farro', sans-serif;
+}
+
+h1 {
+    margin:20px;
+    font-size:5rem;
+    text-shadow: 0 0 15px black;
+    text-align: center;
+}
+li {
+    list-style: none;
+}
+
+a {
+color:white;
+font-size:2rem;
+}
+
+
+
+/* a::before {
+    content: "";
+    background-color: red;
+    width: 10px;
+    height: 10px;
+} */
+
+a:before {
+    font-family: FontAwesome;
+    content: "\f101     ";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-size: 3rem;
+
+}
+p {
+    margin:20px;
+    padding:10px;
+    font-size: 2rem;
+    background:transparent;
+}
