@@ -1,0 +1,437 @@
+* {
+    box-shadow: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background:rgb(48, 44, 44);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    color:rgb(158, 223, 243);
+
+}
+.curved h1 {
+    color:rgb(158, 223, 243);
+    font-size: 8rem;
+    text-align: center;
+    text-shadow: 0 0 20px black;
+}
+
+.movie_status  {
+    color:rgb(158, 223, 243);
+    font-size: 2.5rem;
+    margin:10px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+
+}
+
+.now_showing , .next_week, .d3  {
+    display:flex;
+    /* background-color: rgb(31, 192, 39); */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+img {
+    width: 15rem;
+    height:25rem;
+}
+
+/* Card Flipping Start*/
+
+.card_container {
+    position: relative;
+    width: 15rem;
+    height:25rem;
+    perspective:1000px;
+    transform-style: preserve-3d;
+    background:transparent;
+}
+
+.card {
+    position:absolute;
+    width:100%;
+    height:100%;
+    transition: all 0.5s ;
+    background-color: transparent;
+    /* transform-style: preserve-3d;  */
+
+}
+
+.front {
+    position:absolute;
+    width: 100%;
+    height:100%;
+    backface-visibility: show;
+    color:#333;
+    
+}
+.back {
+    position:absolute;
+    width: 100%;
+    height:100%;
+    backface-visibility: show;
+    background:rgb(0, 0, 0,0.8);
+    transform:rotateY(180deg);
+    color:white;
+
+}
+.back h2{
+    background-color: red;
+    color:white;
+    text-align:center;
+    margin-top:4%;
+}
+.back p{
+    color:white;
+    text-align:justify;
+    margin-top:35%;
+    margin-left:2%;
+    margin-right:2%;
+
+
+
+}
+.fa.fa-youtube {
+    background:red;
+    width:75px;
+    height:75px;
+    color:white;
+    border-radius:50%;
+    line-height: 75px;
+    text-align:center;
+    font-size:50px;
+    margin-top:10%;
+    z-index:100;
+
+}
+.fa.fa-youtube:hover {
+    transform:scale(1.3);
+    transition:1.2s;
+}
+.fa.fa-book {
+    background:rgb(19, 121, 255);
+    width:75px;
+    height:75px;
+    color:white;
+    border-radius:50%;
+    line-height: 75px;
+    text-align:center;
+    font-size:50px;
+    margin-top:10%;
+}
+.fa.fa-book:hover {
+    transform:scale(1.3);
+    transition:1.2s;
+
+}
+.font_awesome {
+    display:flex;
+    justify-content:space-evenly;
+    align-items:space-evenly;
+    flex-direction: row;
+    color:white;
+}
+
+
+.card:hover{
+    transform:rotateY(180deg);
+    cursor: pointer;
+}
+
+/* Card Flipping End*/
+
+
+/* ticket cinema start here */
+
+
+ .ticket{
+    position:fixed;
+    background: #4e54c8;  
+    background: linear-gradient(to left, #8f94fb, #4e54c8);     
+    top:50%;
+    left:300%;
+    transform:translate(-50%, -50%);
+    z-index:3;
+    opacity:0;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:1px 2px 10px black;
+}
+
+.ticket.show{
+    position:fixed;
+    background: #4e54c8;  
+    background: linear-gradient(to left, #8f94fb, #4e54c8);     
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:3;
+    opacity:1;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    transition:1s all ease-out;
+    box-shadow:1px 3px 10px black;
+
+}
+
+
+
+/* ticket cinema end here */
+
+/* ticket css start */
+
+ul {
+    display:flex;
+    list-style-type: none;
+    background-color:rgb(0, 0, 0,.3);
+    border-radius: 5px;
+    margin:10px 10px;
+    
+}
+li {
+    margin:10px;
+    padding:10px;
+    display:flex;
+}
+small {
+    margin-left:10px;
+
+}
+
+.screen {
+
+    background-color:rgb(9, 106, 170);
+    box-shadow: 1px 3px 10px;
+    width:250px;
+    height:75px;
+    margin:20px 20px;
+    border-radius: 5px;
+
+}
+
+select {
+    border-radius: 5px;
+    margin:5px;
+    padding:10px;
+    outline: 0;
+    
+}
+
+.seat {
+    height:14px;
+    width:14px;
+    background-color: rgb(6, 53, 71);
+    border-radius: 10px 10px 0px 0px;
+    margin-left:5px;
+    margin-bottom:5px;
+}
+
+
+.seat.selected{
+    background-color: rgb(31, 255, 244);
+}
+
+.seat.reserved{
+    background-color: rgb(194, 194, 194);
+}
+
+
+
+.ticket_container {
+    display:flex;
+
+}
+
+.row:nth-of-type(3) {
+    margin-left:24px;
+}
+
+.row:nth-last-of-type(3) {
+    margin-right:24px;
+}
+
+
+.ticket_container .seat:not(.reserved):hover {
+    cursor: pointer;
+    /* transform:scale(1.3); */
+    /* border:1px solid  rgb(31, 255, 244); */
+}
+
+p {
+    margin-top:.5rem;
+    font-size:1.3rem;
+}
+span {
+    color:aqua;
+}
+.last {
+    display:flex;
+    flex-grow: 3;
+    margin-top:1rem;
+}
+.cancel,.payment {
+    width: 12rem;
+    height:3rem;
+    border-radius: 5%;
+    text-align: center;
+    line-height:3rem;
+    color:aqua;
+    font-weight: bold;
+    
+}
+.cancel,.payment {
+background-color: rgb(0, 0, 0 ,0.5);
+}
+.payment {
+    background-color: rgb(0, 0, 0 ,0.5);
+    margin-right:4px;
+}
+
+.reset {
+    width: 100%;
+    height:3rem;
+    border-radius:5%;
+    text-align: center;
+    line-height:3rem;
+    color:aqua;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0 ,0.5);
+}
+
+.reset:hover,.payment:hover,.cancel:hover {
+ background-color: rgb(0, 0, 0 ,0.8);
+ 
+}
+
+/* ticket css end */
+
+/* media player css start here */
+.videoPlayer {
+    background:rgb(37, 181, 238);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width:40rem;
+    height:25rem;
+    position: fixed;
+    top:50%;
+    left:500%;
+    transform:translate(-50%, -50%);
+    z-index:10000;
+    opacity:1;
+    box-shadow:1px 2px 10px black;
+}
+.fa.fa-times-circle {
+    color:black;
+    text-align: right;
+    padding:5px;
+
+} 
+
+.videoPlayer.show{
+    text-align: right;
+    background:rgb(37, 181, 238);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width:40rem;
+    height:25rem;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:10000;
+    opacity:1;
+    box-shadow:1px 2px 10px black;
+    transition:1s all ease-out;
+
+
+}
+.videoPlayer h1 {
+    text-align: center;
+    color:rgb(0, 0, 0);
+	text-shadow: 1px 1px 1px,1px 1px 2px rgb(0, 0, 0);
+	color:black; rgb(37, 181, 238);
+	opacity: 1;
+}
+.window {
+    cursor:pointer;
+    width:40rem;
+    height:25rem;
+    background:rgb(0, 0, 0);
+
+}
+.controls {
+    background:rgb(0,0,0,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width:100%;
+    height:3rem;
+}
+
+.progress {
+    width:100%;
+
+}
+
+.fa.fa-play ,.fa.fa-stop, .fa.fa-pause {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    line-height: 45px;
+    text-align:center;
+    font-size:25px;
+    background:transparent  ;
+
+}
+
+
+.fa.fa-play  {
+    background:#05c905;
+}
+
+.fa.fa-stop  {
+    background:rgb(156, 19, 1);
+}
+
+.fa.fa-pause  {
+    background:rgba(0, 158, 8, 0.295);
+    
+}
+
+@media (max-width:800px) {
+    .screen,.control {
+        width:60%;
+    }
+}
+
+.controls .btn {
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:white;
+    padding:4px;
+}
+
+
+
+.timestamp {
+    padding:3px;
+    cursor:pointer;
+}
+/* media player css end here */
