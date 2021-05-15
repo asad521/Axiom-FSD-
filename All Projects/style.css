@@ -18,7 +18,7 @@ body {
 
 h1 {
     margin:20px;
-    font-size:5rem;
+    font-size:5vw;
     text-shadow: 0 0 15px black;
     text-align: center;
 }
@@ -28,7 +28,7 @@ li {
 
 a {
 color:white;
-font-size:2rem;
+font-size:2vw;
 }
 
 
@@ -46,12 +46,15 @@ a:before {
     display: inline-block;
     padding-right: 3px;
     vertical-align: middle;
-    font-size: 3rem;
+    font-size: 3vw;
 
 }
 p {
+    position: absolute;
+    bottom:2%;
     margin:20px;
     padding:10px;
-    font-size: 2rem;
+    font-size: 2vw;
     background:transparent;
+
 }

@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+.ticket_booking{
+	border:1px solid red; 
+}
 
 body {
     font-family: 'Noto Sans HK', sans-serif;

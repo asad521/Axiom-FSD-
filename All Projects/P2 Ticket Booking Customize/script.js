@@ -16,8 +16,8 @@ const ticket=document.getElementById("ticket");
 const videoPlayer=document.getElementById("videoPlayer");
 
 // let  c=document.querySelectorAll('.fa.fa-youtube');
-let  youtube=document.querySelectorAll('.fa.fa-youtube'); //
-let  book=document.querySelectorAll('.fa.fa-book');
+let  book=document.querySelectorAll('.fa.fa-youtube'); //
+let  youtube=document.querySelectorAll('.fa.fa-calendar-alt');
 let close=document.getElementById("close");  //for closing youtube window
 let cancel=document.getElementById("cancel"); //for closing cinema window
 
