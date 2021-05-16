@@ -18,7 +18,7 @@ body {
 
 h1 {
     margin:20px;
-    font-size:5vw;
+    font-size:5vh;
     text-shadow: 0 0 15px black;
     text-align: center;
 }
@@ -28,7 +28,7 @@ li {
 
 a {
 color:white;
-font-size:2vw;
+font-size:2vh;
 }
 
 
@@ -46,7 +46,7 @@ a:before {
     display: inline-block;
     padding-right: 3px;
     vertical-align: middle;
-    font-size: 3vw;
+    font-size: 3vh;
 
 }
 p {
@@ -54,7 +54,7 @@ p {
     bottom:2%;
     margin:20px;
     padding:10px;
-    font-size: 2vw;
+    font-size: 2vh;
     background:transparent;
 
 }

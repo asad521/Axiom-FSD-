@@ -98,13 +98,17 @@ body {
 .front img ,.back img{
     width: 15rem;
     height:25rem;
+    user-select: none;
+
 }
 .back img{
     width: 15rem;
-    height:20rem;    
+    height:25rem;    
     position:absolute;
     z-index:-7;
     opacity: .3;
+    user-select: none;
+
 }
 /* Card Flipping Start*/
 
@@ -161,14 +165,15 @@ body {
 }
 .back p{
     color:rgb(87, 240, 240);
-    text-align:justify;
-    margin-top:35%;
+    margin-top:8rem;
+    margin-bottom:0%; 
     margin-left:2%;
     margin-right:2%;
-    font-size:1.3em;
+    font-size:2vh;
     text-shadow: 1px 1px 2px black;
     font-style: bold;
-
+    text-align:justify;
+    overflow-wrap: break-word;
 }
 .fa.fa-youtube {
     background:red;
@@ -334,7 +339,7 @@ select {
     border-radius: 10px;
     height:5vh;
     margin-bottom:1vh;
-
+    outline: none;
     
 }
 .ticket_container {
@@ -472,14 +477,17 @@ background-color: rgb(0, 0, 0 ,0.5);
     opacity:1;
     box-shadow:1px 2px 10px rgb(189, 56, 56);
 }
-.fa.fa-times-circle {
+.fa.fa-window-close {
     position:absolute;
     color:rgb(0, 0, 0);
-    /* text-align: center; */
-    padding:5px;
     right:0%;
-    top:0%;
-    margin-bottom:90%;
+    height: 100px;
+    font-size:5.5vw;
+    display: inline;
+    /* background-color: rgb(185, 41, 41); */
+    /* border:1px solid rgb(72, 255, 96); */
+    /* background-color:red; */
+    
     
 } 
 
@@ -511,6 +519,7 @@ background-color: rgb(0, 0, 0 ,0.5);
 	opacity: 1;
     font-size: 8vw;
     text-shadow: 2px 1px 1px black;
+    /* border:1px solid red; */
 
 }
 .window {
@@ -790,6 +799,13 @@ small {
     margin-top:1vh;
 
 }
+.fa.fa-window-close {
+    position:absolute;
+    color:rgb(0, 0, 0);
+    right:0;
+    top:0;
+    font-size:2.5vw;
+
 /* media player css end here */
 
   }

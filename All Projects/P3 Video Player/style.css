@@ -7,21 +7,25 @@
 }
 
 body {
-    background:rgb(48, 44, 44);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    font-family: 'Questrial', sans-serif;
+    background-color: #191919;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    
 }
 h1 {
     color:rgb(158, 223, 243);
 }
 
 .screen {
-    cursor:pointer;
-    width:40%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    cursor: pointer;
+    width: 60%;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .controls {
     background:rgb(0,0,0,.5);
@@ -29,11 +33,12 @@ h1 {
     justify-content:center;
     align-items:center;
     color:white;
-    width:40%;
+    width:60%;
     padding:10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 
 .progress {
     width:100%;
@@ -41,12 +46,12 @@ h1 {
 }
 
 .fa.fa-play ,.fa.fa-stop, .fa.fa-pause {
-    width:55px;
-    height:55px;
+    width:45px;
+    height:45px;
     border-radius:50%;
-    line-height: 55px;
+    line-height: 45px;
     text-align:center;
-    font-size:35px;
+    font-size:25px;
     background:transparent  ;
     text-shadow:1px 2px 0px black;
 
@@ -70,12 +75,6 @@ h1 {
 
 
 
-@media (max-width:800px) {
-    .screen,.control {
-        width:60%;
-    }
-}
-
 .controls .btn {
     border:none;
     background:transparent;
@@ -89,4 +88,9 @@ h1 {
 .timestamp {
     padding:3px;
     cursor:pointer;
+}
+@media(max-width: 800px) {
+    .screen, .controls {
+        width: 90%;
+    }
 }
