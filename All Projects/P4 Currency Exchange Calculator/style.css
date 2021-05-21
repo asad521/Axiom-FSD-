@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Farro', sans-serif;
+    text-shadow: 0px 0px 1px black;
+
+}
+ 
+body {
+    background-color:blueviolet;
+    color:black;
+    background: #5c258d; /* fallback for old browsers */
+    background: linear-gradient(to right, #5cDB95, #4389a2); 
+    
+}
+p,h1 {
+    margin:1em;
+    text-align: center;
+    color:black;
+}
+
+
+.container {
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    /* border:1px solid red; */
+    width:100%;
+    padding:.5em;
+    margin:.5em;
+}
+
+select,input {
+    margin-right:1px;
+    height:2.5rem;
+    width:8rem;
+    border-radius: 5%;
+}
+
+.currencyExchangeCalculator {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column ;
+    margin:0 auto;
+    width: clamp(30%, 40%, 50%);
+
+}
+button {
+    height:3rem;
+    width:8rem;
+    border-radius: 5%;
+    background-color:#05386B;
+    color:white;
+}
+
+
+@media(max-width: 500px) {
+    body {
+        background-color:blueviolet;
+        color:black;
+        background: #5c258d; /* fallback for old browsers */
+        background: linear-gradient(to right, #a14987, #4cc0eb); 
+        
+    }
+    p,h1 {
+        margin:.5em;
+        text-align: center;
+        color:black;
+    }
+    
+    
+    .container {
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        width:100%;
+        padding:.5em;
+        margin:0;
+    }
+    
+    select,input {
+        margin-bottom:.5rem;
+        height:2.5rem;
+        width:8rem;
+        border-radius: 5%;
+    }
+    
+    .currencyExchangeCalculator {
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column ;
+    
+    }
+    button {
+        height:3rem;
+        width:8rem;
+        border-radius: 5%;
+    }
+
+
+    }
+
+
+
+
+
+
+
