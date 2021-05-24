@@ -24,7 +24,7 @@ function updateRate() {
     fetch(` https://v6.exchangerate-api.com/v6/7526a7ceef16a1f07acc8c3a/latest/${selectedCurrency1}`)
         .then(res => res.json())
         .then(function (data) {
-
+            console.log(data);
             display.innerText = `1 ${selectedCurrency1} = ${data.conversion_rates[selectedCurrency2]} ${selectedCurrency2} `;
             // amount_two.innerText=`${selectedCurrency2}`
             // console.log(data.conversion_rates[selectedCurrency2]
