@@ -4,8 +4,9 @@ const swap = document.getElementById("swap");
 const amount_one = document.getElementById("amount_one");
 const amount_two = document.getElementById("amount_two");
 const display = document.getElementById("text");
-console.log(amount_two);
-
+pakCurrencyBtn=document.getElementById("pakCurrencyBtn");
+pakCurrencyContainer=document.getElementById('pakCurrencyContainer');
+pakCurrencyBtn.addEventListener('click', fetchCurrency)
 
 //Event Listener
 currency_one.addEventListener('change', updateRate);
@@ -50,6 +51,50 @@ function updateRate2() {
 // }
 
 // calculate();
+
+// =====================Comparision pak=====
+
+function fetchCurrency() {
+    console.log("sfasdf");
+    fetch(`https://v6.exchangerate-api.com/v6/7526a7ceef16a1f07acc8c3a/latest/USD`)
+    .then(res => res.json())
+    .then(function (data) {
+        
+        const currency= data.conversion_rates;
+        addElement(currency);
+
+    })
+
+}
+function addElement(currency) {
+
+        for (keys in currency) {
+            console.log(keys+ ":"+currency[keys])
+            const element = document.createElement('div');
+            element.classList.add('elementt'); //only 4 css  style
+            element.innerHTML = `${keys}: ${currency[keys]}`;
+            pakCurrencyContainer.appendChild(element); 
+            
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

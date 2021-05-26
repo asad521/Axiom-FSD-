@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+
+body {
+    background-color:aliceblue;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-width: 100vh;
+}
+.container {
+    display: flex;
+    padding:20px;
+    margin:0 auto;
+    max-width: 100%;
+    width:800px;
+    border:1px solid rgb(209, 36, 36);
+
+}
+
+aside {
+    padding:10px 20px;
+    width:250px;
+    border:1px solid black;
+}
+
+button {
+    background-color:white;
+    display:block;
+    width:100%;
+    cursor:pointer;
+    border-radius: 5%;
+    font-size:14px;
+    height:30px;
+    margin-bottom:10px;
+
+
+}
+
+main {
+    flex:1;
+    padding:10px 20px;
+    border:1px solid rgb(26, 255, 83);
+
+}
+
+h2 {
+    border-bottom:1px solid black;
+    border-bottom: 1px solid black;
+    display:flex;
+    justify-content:space-between;
+    border:1px solid rgb(50, 253, 84);
+    font-weight: 300;
+}
+/* h3 is used for total wealth formation */
+h3 {
+
+    display:flex;
+    justify-content:space-between;
+    background-color:white;
+    font-weight: 200;
+
+}
+
+.person {
+    display:flex;
+    justify-content:space-between;
+}
