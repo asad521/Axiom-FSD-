@@ -12,7 +12,10 @@ addUserBtn.addEventListener('click', function (e) {
 })
 // double money for user
 doubleBtn.addEventListener('click', function (e) {
-    data = data.map(user => { return { ...user, money: user.money * 2 } }
+    data = data.map(user => { 
+        console.log(user.money*2);
+        return { 
+        ...user, money: user.money * 2 } }
     )
         updateDom();
 })
@@ -20,6 +23,7 @@ doubleBtn.addEventListener('click', function (e) {
 showMill.addEventListener('click', sortByRichest )
 
 function sortByRichest() {
+    
     data.sort((a,b)=>b.money - a.money);
     updateDom();
 }
