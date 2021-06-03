@@ -6,63 +6,70 @@
 }
 
 body {
+    display:grid;
+    place-items: center;
     background-color:aliceblue;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    min-width: 100vh;
+    text-align:center;
+    align-items: center;
+
+    
+
 }
+
+
 .container {
-    display: flex;
-    padding:20px;
-    margin:0 auto;
-    max-width: 100%;
-    width:800px;
-    border:1px solid rgb(209, 36, 36);
-
-}
-
-aside {
-    padding:10px 20px;
-    width:250px;
-    border:1px solid black;
-}
-
-button {
-    background-color:white;
-    display:block;
+  
     width:100%;
-    cursor:pointer;
-    border-radius: 5%;
-    font-size:14px;
-    height:30px;
-    margin-bottom:10px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 main {
     flex:1;
-    padding:10px 20px;
-    border:1px solid rgb(26, 255, 83);
+    width:90%;
+    padding:.1rem;
+    border:2px solid rgb(9, 56, 5);
+   
+
 
 }
 
+aside {
+    display: grid;
+    grid-template-columns:auto auto ;
+    grid-template-rows:auto auto;
+    place-items: center;
+    width:90%;
+    
+    grid-gap:5px;
+}
+button:nth-child(5) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+button {
+    cursor:pointer;
+    border-radius: 5%;
+}
 h2 {
-    border-bottom:1px solid black;
-    border-bottom: 1px solid black;
     display:flex;
     justify-content:space-between;
-    border:1px solid rgb(50, 253, 84);
     font-weight: 300;
+    padding:5px;
+    margin:5px;
 }
 /* h3 is used for total wealth formation */
 h3 {
 
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     background-color:white;
-    font-weight: 200;
 
 }
 
@@ -70,3 +77,42 @@ h3 {
     display:flex;
     justify-content:space-between;
 }
+
+
+    button {
+        background-color:white;
+        display:block;
+        width:100%;
+        cursor:pointer;
+        border-radius: 5%;
+        font-weight:600;
+        height:30px;
+        margin-bottom:1em;
+        font-size:.8em;
+
+    
+    
+    }
+  
+
+
+
+
+
+ @media screen and (min-width: 580px) {
+    .container {
+        flex-direction: column;
+        display: flex;
+        width:50vw;
+        /* border:2px solid rgb(151, 4, 4); */
+    }
+    aside {
+        width:90%;
+
+    } 
+
+
+
+
+
+

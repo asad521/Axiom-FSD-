@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+    background:rgb(14, 18, 78);
+    color:white;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.gameContainer {
+    padding: 20px 30px;
+    position:relative; 
+    background-color:rgb(12, 75, 69);
+    border: 1px solid BLACK;
+    margin:auto;
+    height:350px;
+    width:450px;
+ 
+}
+.gameContainer > div {
+    background-color: rgba(37, 37, 37, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 1px;
+    font-size: 25px;
+    text-align: center;
+    margin:auto;
+}
+.wrongLettersContainer {
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.words {
+    display:flex;
+    bottom:10px;
+    transform:translateY(-50%);
+    justify-content:center;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.letters {
+    border-bottom: 3px solid slateblue;
+    display:inline-flex;
+    margin:0 3px;
+    height:40px;
+    width:20px;
+}
+
+.figureContainer {
+    fill:transparent;
+    stroke:rgb(12, 255, 255);
+    stroke-width: 4px;
+    stroke-linecap: circle;
+    /* background-color:rgb(197, 199, 206); */
+
+}
+
+
+.figure-part {
+    display:none;
+}
+

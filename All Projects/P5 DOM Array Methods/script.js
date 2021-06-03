@@ -27,19 +27,21 @@ function sortByRichest() {
     data.sort((a,b)=>b.money - a.money);
     updateDom();
 }
-// show milioner greater than 15
+// show person having amount greater than 1 million
 filterBtn.addEventListener('click', filterMill )
 
 function filterMill() {
-    data=data.filter(user => user.money >30);
+    data=data.filter(user => user.money >1000000);
+    console.log(user.money)
     updateDom();
 }
 
+//show total wealth event and function by reduce function
 calculateWealth.addEventListener('click',showTotalWealth);
-
 function showTotalWealth() {
+    updateDom();
     const wealth=data.reduce((acc,user) => (acc +=user.money),0 );
-    console.log(formateMoney(wealth));
+    // console.log(formateMoney(wealth))
 
     const wealthEl= document.createElement('div');
     wealthEl.innerHTML= `<h3>Total Wealth:<strong>${formateMoney(wealth)}</strong>
@@ -61,7 +63,7 @@ async function getRandomUser() {
 
     const newUser = {
         name: `${user.name.first} ${user.name.last}`,
-        money: Math.floor(Math.random() * 10)
+        money: Math.floor(Math.random() * 100000)
     };
 
     addData(newUser);
@@ -69,11 +71,12 @@ async function getRandomUser() {
 }
 function addData(adduser) {
     data.push(adduser);
-    console.log(data);
+    // console.log(data);
     updateDom();
 }
 //
 function updateDom(providedData = data) {
+
     //clear main div
     main.innerHTML = '<h2><strong class="person">Person</strong>Wealth</h2>';
     providedData.forEach(item => {

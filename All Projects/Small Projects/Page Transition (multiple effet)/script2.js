@@ -1,5 +1,5 @@
-const box=document.querySelectorAll('#box');
-const boddy=document.querySelector('body');
+// const box=document.querySelectorAll('#box');
+// const boddy=document.querySelector('body');
 
 
 window.addEventListener('load', e => {
