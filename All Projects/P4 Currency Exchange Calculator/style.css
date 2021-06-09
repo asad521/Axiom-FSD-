@@ -72,12 +72,13 @@ button {
 }
 .pakCurrencyContainer {
     position:relative;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 80vh;
-    flex:1;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
     background-color:rgba(243, 152, 77, 0.911);
+    margin:10px 5px;
+    text-align: center;
+    vertical-align: middle;
+
 
 }
 .elementt{
@@ -95,6 +96,15 @@ button {
         margin:0;
         padding:0;
 
+    }
+    .pakCurrencyContainer {
+        position:relative;
+        display:grid;
+        grid-template-columns: auto auto ;
+        background-color:rgba(243, 152, 77, 0.911);
+        margin:10px 5px;
+
+    
     }
  
     h1 {

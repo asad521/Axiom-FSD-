@@ -14,7 +14,6 @@
     <P>Find the hidden word-Enter a letter</P>
     <div class="gameContainer">
         <svg class="figureContainer" height="250" width="250">
-
             <!-- horizental/vertical end/vertical main/base -->
             <line x1="60" y1="20" x2="140" y2="20" />
             <line x1="140" y1="20" x2="140" y2="60" />
@@ -31,32 +30,30 @@
             <line class="figure-part" x1="140" y1="180" x2="120" y2="200" />
             <line class="figure-part" x1="140" y1="180" x2="160" y2="200" />
         </svg>
-        <div class="wrongLettersContainer">
-            <div id="wrong-letters">
-                <p>Wrong</p>
-                <span>e,r,t,y</span>
-            </div>
-        </div>
+
 
         <div class="words" id="words">
-            <div class="letters">h</div>
-            <div class="letters">e</div>
-            <div class="letters">l</div>
-            <div class="letters">l</div>
-            <div class="letters">o</div>
         </div>
-    <div class="popupContainer" id="popupConatainer">
-        <div class="popup">
-        <button class="play">Play</button>
-        <h2>You have Won</h2>
-    </div>
-    </div>
 
-    <div class="notificaton" id="notification">
-        <p>You have alread enter this letter.</p>
+        <div class="wrongLettersContainer">
+            <div id="wrong-letters">
+                <p>Wrong Letters</p>
+                <span></span>
+            </div>
+        </div>
+        <div class="popupContainer" id="popupContainer">
+            <div class="popup">
+                <h3></h3>
+                <button class="play">Play Again</button>
+            </div>
+        </div>
+     
+    
+       
     </div>
+    <div class="notification" id="notification">
+        <p>You have already entered this letter. </p>
     </div>
-
 
 
 

@@ -15,10 +15,20 @@ body {
     color:rgb(230, 230, 230);
     font-family: 'Farro', sans-serif;
 }
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items: space-between;
 
+}
+.mainProjects,.smallprojects {
+    border:1px solid aqua;
+    margin:5px;
+    padding:10px;
+}
 h1 {
     margin:20px;
-    font-size:5vh;
+    font-size:4vh;
     text-shadow: 0 0 15px black;
     text-align: center;
 }
