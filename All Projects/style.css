@@ -11,8 +11,7 @@ body {
     align-items: center;
     justify-content:center;
     flex-direction:column;
-    background-color:blueviolet;
-    color:rgb(230, 230, 230);
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    color:rgb(230, 230, 230);
     font-family: 'Farro', sans-serif;
 }
 .container {
@@ -21,22 +20,24 @@ body {
 
 }
 .mainProjects,.smallprojects {
-    border:1px solid aqua;
+    border:1px solid rgb(0, 0, 0);
     margin:5px;
     padding:10px;
+    box-shadow: 1px 1px black;
 }
 h1 {
     margin:20px;
     font-size:4vh;
-    text-shadow: 0 0 15px black;
+    /* text-shadow: 0 0 15px black; */
     text-align: center;
+    color:white;
 }
 li {
     list-style: none;
 }
 
 a {
-color:white;
+color:rgb(255, 255, 255);
 font-size:2vh;
 }
 @media(max-width: 450px) {

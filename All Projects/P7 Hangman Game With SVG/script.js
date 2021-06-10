@@ -112,7 +112,11 @@ playAgain.addEventListener('click', e => {
 
     alpha.addEventListener('click', e => {
 
-
+        if (correctedones.includes(e.target.innerHTML)) {
+            notification.classList.add("show");
+            setTimeout(e =>
+                notification.classList.remove("show"), 1000)
+        }
 
         if (e.target.classList.contains('button')) {
 
