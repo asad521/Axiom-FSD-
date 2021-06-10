@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+    background:rgb(14, 18, 78);
+    color:white;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.gameContainer {
+    display:flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    position:relative; 
+    background-color:rgb(12, 75, 69);
+    border: 1px solid aqua;
+    margin:auto;
+    height:450px;
+    width:550px;
+    display:flex;
+ 
+}
+
+.wrongLettersContainer {
+    position:absolute;
+    top:20px;
+    right:20px;
+    background-color:rgb(0, 0, 0 ,.3);
+
+
+}
+.words {
+    
+    text-align: center;
+    text-transform: lowercase;
+    margin-top:20%;
+
+}
+.words  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid #2980b9; */
+
+    
+    
+
+}
+.letters {
+    border-bottom: 3px solid #2980b9;
+    font-size: 30px;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+
+}
+
+.figureContainer {
+    fill:transparent;
+    stroke:rgb(12, 255, 255);
+    stroke-width: 4px;
+    stroke-linecap: circle;
+    background-color:rgb(0, 0, 0 ,.3);
+
+}
+
+
+.figure-part {
+    display:none;
+}
+
+
+.popupContainer {
+    background:rgba(0,0,0,.3);
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    display:none; 
+    
+
+}
+.popup {
+    background:rgba(0,0,0,.3);
+    border-radius: 5px;
+    padding:10px;
+    margin-top:30px;
+    
+}
+.popupContainer.add {
+    display:flex; 
+}
+
+
+
+.popup button {
+ 
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    color:rgb(57, 9, 119);
+    font-weight:bold;
+    font-size:1.5rem;
+    padding:5px;
+    background:mediumseagreen;
+    transition:transform .2s linear;
+    margin:5px;
+
+}
+
+.popup button:active {
+    transform:scale(1.1);
+    color:aqua;
+
+}
+.popup button:focus {
+    outline:0;
+}
+
+.notification{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    display: inline-flex;
+    transform:translateY(500px);
+
+
+
+}
+.notification.show{
+     transition:  .3s linear ;
+     transform:translateY(150px);
+
+}
+
+
+
+
+

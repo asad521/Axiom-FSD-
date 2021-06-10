@@ -17,8 +17,7 @@ body {
 }
 .container {
     display:flex;
-    justify-content:space-between;
-    align-items: space-between;
+
 
 }
 .mainProjects,.smallprojects {
@@ -39,6 +38,17 @@ li {
 a {
 color:white;
 font-size:2vh;
+}
+@media(max-width: 450px) {
+    a {
+        font-size:1.5vh;
+        }
+        h1 {
+            margin-bottom:20px;
+            font-size:3vh;
+            text-shadow: 0 0 15px black;
+            text-align: center;
+        }
 }
 
 
