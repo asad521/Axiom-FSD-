@@ -61,27 +61,33 @@ function fetchCurrency() {
     .then(function (data) {
         
         const currency= data.conversion_rates;
+        console.log(currency)
         addElement(currency);
 
     })
 
 }
 function addElement(currency) {
-
+        console.log(currency)
         for (keys in currency) {
+            console.log(keys)
+             countryFullName=countryName(keys);
             console.log(keys+ ":"+currency[keys])
             const element = document.createElement('div');
             element.classList.add('elementt'); //only 4 css  style
-            element.innerHTML = `${keys}: ${currency[keys]}`;
+            element.innerHTML = `${countryFullName}: ${currency[keys]}`;
             pakCurrencyContainer.appendChild(element); 
             
         }
 
 
     }
-
-
-
+    function countryName(ccode)  {
+    console.log(typeof ccode)
+    country_object={USD:"United States of America", PAK:"Pakistan", IND:"INDIA"};
+    return country_object[ccode]
+    
+    }
 
 
 

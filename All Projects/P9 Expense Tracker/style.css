@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+    background:rgb(14, 18, 78);
+    color:rgb(0, 0, 0);
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+.tracker {
+    background:rgb(87, 238, 200);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+
+}
+
+h1 {
+
+}
+
+h3 {
+    /* margin:10px; */
+    padding:10px;
+}
+.current {
+    display:flex;
+    align-items:space-between;
+    justify-content:space-between;
+    width:60%;
+}
+
+.income,.expense {
+    /* border-right:1px solid red; */
+    width:60%;
+    padding:10px;
+}
+.income {
+    border-right:1px solid red;
+}
+
+span {
+    display:block;
+    font-size: 26px;
+}
+
+.line {
+    border-bottom: 1px solid  white;
+    display:block;
+    width:80%;
+    text-align: center;
+}
+.history {
+    margin:10px;
+    padding:10px;
+    width:100%;
+}
+.transaction {
+    margin:10px;
+    padding:10px;
+ display:flex;
+ flex-direction:column;
+ /* background:white; */
+}
+
+.person {
+    display:flex;
+    flex-direction: row;
+    align-items:space-between;
+    justify-content:space-between;
+    width:inherit;
+    padding:10px;
+}
+
+
+
+.person span {
+    background-color: rgb(0,0,0 ,0.3);
+    color:rgb(11, 247, 255);
+    padding:5px;
+    margin:0px;
+}
+
+
+
+.income span {
+    
+    background-color: rgb(0,0,0 ,0.3);
+    color:green;
+    padding:5px;
+    margin:0px;
+}
+
+.expense span {
+    background-color: rgb(0,0,0 ,0.3);
+    color:red;
+    padding:5px;
+    margin:0px;
+}
+

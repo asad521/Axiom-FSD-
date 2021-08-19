@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5db7f19119.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5db7f19119.js" crossorigin="anonymous"></script>
+    <title>My Project</title>
+</head>
+
+<body>
+    <h1>Meal Finder</h1>
+
+    <div class="container">
+        <div class="flex">
+            <form class="flex" id="submit">
+                <input type="text" id="search" class="search" placeholder="Search for meals ">
+                <button class="search-btn" type="submit" id=button>
+                    <i class="fas fa-search" id="search"></i>
+                </button>
+            </form>
+            <button class="random" id="random">
+                <i class="fas fa-random"></i>
+            </button>
+        </div>
+
+        <!-- receipte container -->
+        <div class="searchResults" id="searchResults"></div>
+        <!-- meal from API -->
+        <div class="meals" id="meals"></div>
+        <!-- meal detials selected -->
+        <div class="selectedMeals" id="selectedMeals"></div>
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
