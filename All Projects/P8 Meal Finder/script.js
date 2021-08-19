@@ -32,11 +32,15 @@ function searchMeal(e) {
                 if (data.meals === null) {
                     results.innerHTML = `<h1>No Receipe is Found for ${searchText}</h1>`
                     meals.innerHTML = '';
+                    selectedMeals.innerHTML='';
+
 
 
                 } else {
                     results.innerHTML = `<h1>Search Results  for the ${searchText}</h1>`
                     meals.innerHTML = ``; // for removing previous result
+                    selectedMeals.innerHTML='';
+
                     data.meals.map(item => {
                         // console.log(item);
                         const main = document.createElement('div');
@@ -85,13 +89,52 @@ meals.addEventListener('click', e => {
 });
 
 function getMeal(id) {
-    console.log("inside getmeal function" )
+    console.log("inside getmeal function")
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then(response => response.json())
         .then(data => {
-            console.log( data.meals[0])
+            // console.log( data.meals[0])
+            const mealObject = data.meals[0];
+            getReceipe(mealObject)
+
         }
         );
 
 }
 
+
+function getReceipe(mealObject) {
+    console.log("inside get recepie function")
+
+
+    ingredients = []
+    for (let i = 0; i < 20; i++) {
+        if (mealObject[`strIngredient${i}`]) {
+            // console.log(mealObject[`strIngredient${i}`])
+            // console.log(mealObject[`strMeasure${i}`])
+            ingredients.push(`${mealObject[`strIngredient${i}`]}:${mealObject[`strMeasure${i}`]}`)
+        }
+    }
+    console.log(ingredients)
+    console.log(mealObject)
+    selectedMeals.innerHTML='';
+    const instruction = document.createElement('div');
+    // instruction.innerHTML='';
+    instruction.classList.add('instruction');
+
+    instruction.innerHTML =
+        `               
+                        <h3>${mealObject.strMeal}</h3>
+                        <img src="${mealObject.strMealThumb}" alt="${mealObject.strMeal}">
+                        <p>${mealObject.strInstructions}</p3>
+                        <div class='ingredients'> 
+                        <ul>
+                        <h3>Ingredients</h3>
+                        ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                        </div>
+                         `
+    selectedMeals.appendChild(instruction)
+
+
+}
