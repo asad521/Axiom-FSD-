@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+    background:rgb(51, 77, 88);
+    /* color:rgb(150, 103, 103); */
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height:100vh;
+    color:rgb(121, 255, 68);
+}
+.container {
+    background:rgb(84, 245, 62);
+    border-radius: 10px;
+    position:relative;
+    width:400px;    
+    margin:10px;
+}
+
+
+.info {
+   z-index:10;
+   opacity:1;
+   transform:translateY(0%);
+   transition: transform  ease-out 3s, opacity  ease-out 2s;
+   position:absolute;
+   right:0;
+
+}
+
+.container.play .info{
+    opacity:1;
+    transform:translateY(-100%);
+    
+}
+.container.play  h4{
+   color:rgb(0, 0, 0);
+    
+}
+
+.progress {
+    position:absolute;
+    bottom:5px;
+    border:1px solid rgb(37, 57, 168);
+    cursor:pointer;
+    left:10px;
+    right:10px;
+    height:10px;  
+    z-index:1001;
+  
+   
+}
+
+.progressBar {
+   position:absolute;
+   background-color:rgba(56, 7, 190, 0.959);
+   cursor:pointer;
+   transition:width 0.1s linear;
+   height:10px; 
+   width:100%;
+   z-index:1001;
+
+
+}
+
+.album {
+    width:400px;
+
+}
+
+img {
+    width:55px;
+    height:55px;
+    border-radius: 50%;
+    position:absolute;
+    top:5px;
+    left:5px;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+    margin-bottom:15px;
+}
+
+.container.play img {
+    animation-play-state: running;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+
+    }
+    
+}
+ .nav {
+    /* background:red; */
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index: 11;
+
+ }
+
+ .nav button {
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+    outline:none;
+    border:none;
+    font-size: 40px;
+    background-color:rgb(34, 17, 110);
+    background-color:transparent;
+
+    color:rgb(0, 0, 0);
+    padding:10px;
+    z-index: 1001;
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+    line-height:20px;
+    font-size: 15px;
+    margin-bottom:20px;
+    margin-left:5px;
+}
+
+#play {
+     font-size: 20px;
+     background-color:BLACK;
+     color:white;
+
+ }
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
