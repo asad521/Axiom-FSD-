@@ -4,7 +4,7 @@ const newsFeed = document.getElementById("news_feed_container");
 const loader = document.getElementById("loader");
 
 // global variable to for getting onlly 5 post every time
-let limit = 15;
+let limit = 10;
 let page = 1;
 
 //function to get asynchrounsluy fetchs posts from API
@@ -13,7 +13,7 @@ async function fetchPosts() {
     //fetch latest 5 posts
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
     const data = await res.json();
-    console.log(data)
+    // console.log(data)
     return data
 };
 
@@ -21,7 +21,7 @@ async function fetchPosts() {
 async function displayPosts() {
 
     const posts = await fetchPosts();
-    console.log(posts)
+    // console.log(posts)
 
     //creating HTML structure for each posts
     posts.forEach(item => {
@@ -66,4 +66,39 @@ window.addEventListener('scroll', e => {
 
 })
 
+//Event Trigger for filter/search box
+filter.addEventListener('input', searchPosts) 
 
+function searchPosts(e) { 
+    //getting the typed word of search box
+    // console.log("input is " +e)
+    const keyword=e.target.value.toLowerCase();
+    //getting al the post
+    const posts=document.querySelectorAll('.posts');
+    // console.log(posts)
+    //for each single post
+    posts.forEach(item => {
+        // console.log(item)
+    //getting title from each single post
+    // console.log(item)
+    const title= item.querySelector('.post_title');
+    const body= item.querySelector('.post_body');
+    console.log(title.innerText)
+    // console.log(body.innerText)
+    //index of is used here to find the word. 
+    //if word exist it will give 0 or 1
+    //if not exist ,it will give -1
+    if(title.innerText.indexOf(keyword) >= 0 || body.innerText.indexOf(keyword) >= 0 ){
+        // if word is present , display the post simply dipslay
+        item.style.display='flex';
+    } else {
+        item.style.display='none';
+
+    }
+
+    //search the key in body and title
+     
+
+
+    })
+}
