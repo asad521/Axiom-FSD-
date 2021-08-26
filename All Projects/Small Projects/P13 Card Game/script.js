@@ -2,6 +2,7 @@ const plus = document.getElementById('plus');
 const remove_card = document.getElementById('remove_card');
 const add_card_container = document.getElementById('add_card_container');
 const add_new_card = document.getElementById('add_new_card');
+const remove = document.getElementById('remove');
 //above is for showing input field at begining
 const submit = document.getElementById('submit');
 //getting flipcard
@@ -17,17 +18,30 @@ const questionElement = document.querySelector('.question_container textarea');
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
 const span = document.querySelector('span');
-console.log(previous)
-console.log(next)
+//for styleing
+const buttons=document.querySelector('button');
 
+buttons.addEventListener('onclick', e =>{
+   buttons.classList.add('formate');
+})
+// console.log(previous)
+// console.log(next)
 let index=0;
-
 let cards =[];
 // console.log(cards.push('asdf'))
 // console.log(cards.push('asdf'))
 // console.log(cards)
 
+   //reload window///add_card_container
+   const storedCards = JSON.parse(localStorage.getItem('cards'));
+   if (storedCards != null) {
+      cards=storedCards;
+      console.log( storedCards)
+      flipCardGeneration(storedCards,0)
 
+   }
+
+   ////
 
 // to show the input text area of question/answer input
 plus.addEventListener('click', e => {
@@ -42,6 +56,7 @@ remove_card.addEventListener('click', e => {
    console.log(input_container)
    add_card_container.style.display = 'none';
    add_new_card.style.opacity = '1';
+   
 
 })
 
@@ -56,14 +71,12 @@ submit.addEventListener('click', e => {
    if (answerElement.value !='' && questionElement.value!='' ) {
      // flip_card_front.innerText=questionElement.value;
    // flip_card_back.innerText=answerElement.value;
-   cards.push({answer,question})
+   cards.push({question,answer})
+   //also add to local storage
+   localStorage.setItem('cards', JSON.stringify(cards));
    flipCardGeneration(cards,index);
-   console.log(cards)
    // console.log('first card element os' + cards[0].answer)
    // console.log('first card element os' + cards[0].question)
-   add_card_container.style.display = 'none';
-   add_new_card.style.opacity = '1';
-   flip_card.style.display = 'flex';
    // clear the inpust fields
    answerElement.value='';
    questionElement.value='';
@@ -72,22 +85,42 @@ submit.addEventListener('click', e => {
 
 })
 function flipCardGeneration(cards,index) {
-console.log(index)
+   console.log("index before adding flip card" +index)
+
 span.innerText=`${index+1}/${cards.length}`;
-flip_card_inner.innerHTML=`
-<div class="flip-card-front" id="flip-card-front">
-   <p>${cards[index].answer}</p>
+
+if(cards.length != 0 ){
+
+   flip_card_inner.innerHTML=`
+   <div class="flip-card-front" id="flip-card-front">
+      <p>${cards[index].question}</p>
+      </div>
+   <div class="flip-card-back" id="flip-card-back">
+      <p>${cards[index].answer}</p>
    </div>
-<div class="flip-card-back" id="flip-card-back">
-   <p>${cards[index].question}</p>
-</div>
-   `
+      `
+      add_card_container.style.display = 'none';
+      add_new_card.style.opacity = '1';
+      flip_card.style.display = 'flex';
+      index = index+1;
+      console.log("idnex after adding flip card" +index)
+
+   } else {
+      add_card_container.style.display = 'none';
+      add_new_card.style.opacity = '1';
+      flip_card.style.display = 'none';
+      index=0;
+      
+   }
+
+
+
 }
 
 previous.addEventListener("click", e =>{
    console.log('previous')
 if (index===0) { 
-   flipCardGeneration(cards,index);
+   console.log('do nothing')
 } else {
    index--;
    flipCardGeneration(cards,index);
@@ -96,12 +129,35 @@ if (index===0) {
 })
 
 next.addEventListener("click", e =>{
-   console.log('next')
-   console.log(cards.length)
-   if (index===cards.length-1) { 
-         flipCardGeneration(cards,index);
+   console.log('inside next')
+   console.log(index)
+   if (index != cards.length -1 && cards.length != 0) {
+   index=index+1;
+   flipCardGeneration(cards,index);
    } else {
-      index++;
-      flipCardGeneration(cards,index);
+      console.log('do nothing')
    }
+         
+
+ 
+   })
+
+   flip_card_inner.addEventListener("click", e=>{
+      flip_card_inner.classList.toggle('toggle');
+      console.log("in flip back")
+      console.log(flip_card_inner)
+
+
+   })
+
+   remove.addEventListener('click', e => {
+      cards=[];
+      index=0;
+      add_card_container.style.display = 'none';
+      add_new_card.style.opacity = '1';
+      flip_card.style.display = 'none';
+      span.innerText=`${0}/${0}`;
+      console.log(cards.length)
+
+
    })
