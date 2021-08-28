@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+.container {
+    background:rgb(160, 162, 182);
+    color:black;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.task-list {
+    background-color:rgb(aqua);
+    border:1px solid red;
+    width:300px;
+    height:400px;
+}
+.tabs {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    padding:10px;
+    margin:10px;
+}
+.first,.next,.previous,.last {
+    margin:5px;
+    border:1px solid green;
+}
+.first:hover,.next:hover,.previous:hover,.last:hover {
+    margin:5px;
+    border:1px solid rgb(47, 35, 223);
+    background-color:aliceblue
+}
+

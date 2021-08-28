@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+p {
+    position: relative;
+}
+.sections {
+    height:100vh;
+    margin:auto 0;
+    display:grid;
+    place-items: center;
+    font-weight: 800;
+    font-size:2rem;
+    color:black;
+    color:rgb(255, 255, 255);
+
+}
+
+.sections:nth-child(1) {
+    background-color:cadetblue;
+    background-image: url(3.jpg);
+    background-size:100vw 100vh;
+
+
+    
+
+}
+.sections:nth-child(2) {
+    background-color:rgb(32, 78, 80);
+    color:white;
+
+}
+.sections:nth-child(3) {
+    background-color:rgb(14, 37, 82);
+    background-image: url(1.jpg);
+    background-size:cover;
+    /* background-attachment: fixed; */
+
+    color:white;
+
+}
+.sections:nth-child(4) {
+    background-color:rgb(199, 17, 144);
+    color:white;
+
+}
