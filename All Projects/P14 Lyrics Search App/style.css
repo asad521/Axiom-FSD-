@@ -6,6 +6,38 @@
     margin:0;
 
 }
+/*  */
+header {
+    background-color:red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+}
+
+/* for overlay on a backgroud */
+
+header::after {
+    position: absolute;
+    content:'';
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,.6 )
+}
+/* bring everything on front while overlay is at back */
+header * {
+    z-index:2;
+}
+h1 {
+    background-color:green;
+}
+
+
+
+
 
 body {
     background:#9068be;
@@ -170,3 +202,44 @@ input{
     
 
 }
+
+.btn {
+    background-color:#9068be;
+    color:black;
+
+}
+
+ul.songs {
+    list-style-type:none;
+}
+
+ul.songs li{
+    display:flex;
+    align-items: flex;
+    justify-content:center;
+}
+
+.container {
+    margin:30px;
+    background-color:#e62739;
+    border:1px solid aqua;
+}
+
+.container h2 {
+    font-weight: 300;
+}
+
+.container p {
+    text-align: center;
+}
+ .centered {
+     display:flex;
+     justify-content:left;
+     background-color:rgb(20, 92, 50);
+
+ }
+.centered button {
+    background-color:aquamarine;
+}
+
+

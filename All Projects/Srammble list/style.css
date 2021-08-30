@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+    background:rgb(181, 185, 241);
+    color:white;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+.container {
+    display:flex;
+    flex-direction:column;
+}
+
+button {
+    width:60px;
+    height:40px;
+    border:1px solid red;
+}
+
+
+
+
+
+.list {
+    border:1px solid green;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    /* align-items: center;     */
+    list-style-type: none;
+
+}
+.list li.over .drag {
+    background-color:cadetblue;
+}
+.list li.over  {
+    background-color:cadetblue;
+}
+
+.list  li.right p {
+color:rgb(147, 255, 23);
+
+}
+.list li.wrong p {
+    color:red;
+    
+    }
+
+li {
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content:space-between;
+    /* background-color:rgb(129, 175, 129); */
+    border:1px solid black;
+    width:200px;
+    position:relative;
+
+}
+
+
+
+.drag {
+    width:80%;
+    height:60px;
+    border:1px solid red;
+    cursor:pointer;
+    margin:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.drag:hover {
+
+    cursor:pointer;
+    background-color:chartreuse;
+}
+
+.number {
+    width:40px;
+    height:40px;
+    background-color:rgb(223, 213, 213);
+    color:black;
+    text-align: center;
+}
