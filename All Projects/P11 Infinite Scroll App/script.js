@@ -59,7 +59,7 @@ window.addEventListener('scroll', e => {
     console.log("scrollHeight =>" + scrollHeight)
     console.log("clientHeight =>" + clientHeight)
     //to check if we reach bottom of page
-    if (scrollTop + clientHeight >= scrollHeight - 200) {
+    if (scrollTop + clientHeight >= scrollHeight - 400) {
         console.log("reached to bottom of page");
         showLoader();
     }

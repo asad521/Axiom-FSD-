@@ -10,9 +10,24 @@
     <title>Typing Game</title>
 </head>
 <body>
-<button class="setting_button" id="setting_button">
+<div class="screen" id="screen">
+    
+    <P>Welcome to the Game.Type as fast as you can.Default Keybaord is based on US-International standard. There are three settings.Easy,Medium & Hard. On each correct  word, 
+        You will gain 1 score and 1 sec will be added to you remaining time if difficulty level=Hard.3sec are added if difficulty level=Easy</P>
+    <div class="screenCtrl">
+    <button class="start" id="start">
+        <i class="fa fa-tools"></i>Start 
+    </button>
+    <button class="settingBtn" id="settingBtn">
+        <i class="fa fa-tools"></i>Settings 
+    </button>
+</div>
+</div>
+
+
+<!-- <button class="setting_button" id="setting_button">
     <i class="fa fa-tools"></i>Setting 
-</button>
+</button> -->
 <!-- setting  -->
 <div class="settings " id="settings">
     <!-- form for user input -->
@@ -31,15 +46,13 @@
  <h1 class="word" id="word">Sample Word</h1>
  <!-- input field for typing by user -->
  <input type="text" class="user_input" id="user_input" placeholder="Please Type Here" autocomplete="off">
-<!-- time control -->
+<!-- f control -->
 <p class="timer" id="timer">
-    Time Remaining: <span class="time" id="time">60 sec</span>
+    Time Remaining: <span class="time" id="time"></span>
 </p>
 
 <!-- score control -->
-<p class="score" id="score">
-     <span class="score" id="score">Score:0</span>
-</p>
+     <span class="score" id="score">Score-0</span>
 </div>
 
 

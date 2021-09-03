@@ -10,7 +10,7 @@ const progressBar=document.getElementById('progressBar');
 let   audioTrack=document.getElementById('audio');
 
 // Songs Array
-const tracks= ['14','15','16','17',]
+const tracks= ['Track-1','Track-2','Track-3','Track-4',]
 
 //Events//////a
 // event trigger on every update of audio file

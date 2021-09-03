@@ -115,7 +115,6 @@ function  dragLeave() {
 
 check.addEventListener('click',e =>{
  console.log(e)
-
  console.log(listItems);
  listItems.forEach((item,index) => {
      console.log(item)

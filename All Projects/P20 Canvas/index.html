@@ -11,11 +11,25 @@
     <title>Canvas</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="800" height="700"></canvas>
+    <div class="screen" id="screen">
+    
+        <P>Welcome to the Game.Type as fast as you can.Default Keybaord is based on US-International standard. There are three settings.Easy,Medium & Hard. On each correct  word, 
+            You will gain 1 score and 1 sec will be added to you remaining time if difficulty level=Hard.3sec are added if difficulty level=Easy</P>
+        <div class="screenCtrl">
+        <button class="start" id="start">
+            <i class="fa fa-tools"></i>Start 
+        </button>
+        <button class="settingBtn" id="settingBtn">
+            <i class="fa fa-tools"></i>Settings 
+        </button>
+    </div>
+    </div>
+    <!-- <h2>Play the Game and Win Coins</h2> -->
+    <canvas id="myCanvas" width="500" height="700"></canvas>
 
     
 
-
+    <div class="gameover" id="gamevoer"></div>
 
 
     <script src="script.js"></script>

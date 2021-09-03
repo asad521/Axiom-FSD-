@@ -1,4 +1,18 @@
 
+
+
+
+const difficulty=document.getElementById('difficulty');
+const start=document.getElementById('start');
+const screen=document.getElementById('screen');
+// const settingBtn=document.getElementById('settingBtn');
+console.log(settingBtn)
+let gameStart=false;
+console.log(start)
+
+
+
+// Above is Added for Start Screen
 const canvas = document.getElementById("myCanvas");
 var cts = canvas.getContext('2d');
 cts.fillStyle = 'red';
@@ -16,27 +30,28 @@ cts.beginPath();
 cts.arc(166, 200, 70, 0, Math.PI * 2, false);
 cts.fillStyle = 'blue';
 cts.fill();
-cts.strokeStyle = 'white';
+// cts.strokeStyle = 'white';
 cts.stroke();
 cts.closePath();
 //draw paddel parameter
-var paddleHeight = 10;
-var paddleWidth = 75;
+var paddleHeight = 30;
+var paddleWidth = 70;
 var paddleX = (canvas.width - paddleWidth) / 2; //place center at center of canwas width
+console.log('width of canvwas' + canvas.height )
 // function to draw the ball continously
 var x = canvas.width / 6;
 var y = canvas.height / 6;
 var dx = 1; //variable x for moving
 var dy = -2;//variable y for moving
-ballRadius = 20;
+ballRadius = 10;
 //brick variable 
 var brickRows=4;
-var brickCols=2;
-var brickHeight=20;
-var brickWidth=80;
+var brickCols=6;
+var brickHeight=25;
+var brickWidth=50;
 var brickPadding = 10; //distance between bricks
-var brickOffsetTop = 30;   //distance from top canvas
-var brickOffsetLeft = 30;   //distance from left canvas border
+var brickOffsetTop = 50;   //distance from top canvas
+var brickOffsetLeft = 45;   //distance from left canvas border
 //score varible
 var score=0;
 var bricks=[];
@@ -44,7 +59,7 @@ var bricks=[];
 //fucntion for score draw
 function drawScore() {
     cts.font = "16px Arial";
-    cts.fillStyle = "#0095DD";
+    cts.fillStyle = "#000000";
     cts.fillText("Score: "+score, 8, 20);
 
 
@@ -82,7 +97,7 @@ function drawBricks() {
             bricks[c][r].y = brickY;
             cts.beginPath();
             cts.rect(brickX, brickY, brickWidth, brickHeight);
-            cts.fillStyle = "#0095DD";
+            cts.fillStyle = "#FFB600";
             cts.fill();
             cts.closePath();
         }}
@@ -125,21 +140,31 @@ function draw() {
     // }
     // below is added for game over at the bottom
     if (y + dy < ballRadius) { //only for top wall coliication .
-        dy = -dy;
-        // console.log('trigger')
-    } else if (y > canvas.height - ballRadius) //if the ball position=y is less greater than canvws+radius,means it 
+        dy = -dy; 
+    } else if (y > canvas.height - ballRadius-30) //if the ball position=y is less greater than canvws+radius,means it 
     // has reached to end of canvas at bottom
     // then check whether  the ball x-position=x=ball is between position of paddle x +paddlewidth .return the ball =bounce back
+    //30 is heigth of paddle .so bounch back when touch paddle surface
+    //one is added for detecting the collision at the paddle edges
     {
-        if (x > paddleX && x < paddleX + paddleWidth) { //if x=ball is between position of paddle x +paddlewidth .return the ball =bounce back
+        if (x > paddleX && x < paddleX + paddleWidth+1) { //if x=ball is between position of paddle x +paddlewidth .return the ball =bounce back
             dy = -dy;
+            console.log('trigger2')
+            console.log(y)
+
         }
-        else {
+        //below is added to trigger the gameover when ball touches ground
+        // not when it goes below paddle height
+        else if (y > canvas.height - ballRadius ) {
+            // showGameover();
+
             alert("GAME OVER");
-            document.location.reload();
+            window.location.reload();
             clearInterval(interval);
         }
     }
+    
+
 
     x += dx;
     y += dy;
@@ -203,7 +228,7 @@ function collisionDetection() {
         for(var r=0; r<brickRows; r++) {
             var b = bricks[c][r];
             if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y +brickHeight) {
                     dy = -dy;
                     b.status = 0;
                     score++;

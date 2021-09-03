@@ -8,21 +8,25 @@
 }
 
 body {
-    background:rgb(49, 170, 70);
-    color:black;
-    font-family: 'Noto Sans HK', sans-serif;
-    font-family: 'Rubik', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
+    background:  url('./mediate.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
     min-height: 100vh;
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    color:rgb(34, 48, 15);
+    padding:20px;
+    box-shadow:1px 2px 5px black;
 }
 .container {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,14 +35,36 @@ body {
     width: 300px;
     position: relative;
     transform: scale(1);
-    /* background-color: #aac5df; */
+}
+.container.grow {
+    animation :grow  4s linear forwards;
 
-
+}
+.container.shrink {
+    animation :shrink 4s linear forwards;
 
 }
 
+@keyframes grow {
+    from{
+        transform:scale(1);
+    }
+    to {
+        transform:scale(1.3)
+    }   
+}
+@keyframes shrink {
+    from{
+        transform:scale(1.3);
+    }
+    to {
+        transform:scale(1)
+    }   
+}
+
+
 .circle {
-    background-color: #010201;
+    background-color: #131f10;
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -49,23 +75,27 @@ body {
     
 }
 
-.gradienCircle {
-    background:conic-gradient(from 90deg at 50% 50%, rgba(130, 238, 139, 1) 10%, rgba(3, 169, 244, 1) 25%, rgba(255, 59, 159, 0.33) 49%, rgba(91, 57, 173, 1) 100%);
-  
-
-height: 320px;
-  width: 320px;
-  z-index: -2;
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: -10px;
+.gradient {
+    background: conic-gradient(
+        #55b7a4 0%,
+        #4ca493 40%,
+        rgb(185, 79, 218) 40%,
+        rgb(43, 41, 59) 60%,
+        #336d62 60%,
+        #12221f 100%
+      );
+      height: 320px;
+      width: 320px;
+      z-index: -2;
+      border-radius: 50%;
+      position: absolute;
+      top: -10px;
+      left: -10px;
 
 
 }
 
 .pointer {
-
     background-color: #fff;
     border-radius: 50%;
     height: 20px;
@@ -74,11 +104,6 @@ height: 320px;
 }
 
 .pointerContainer {
-    position:absolute;
-    /* border:1px solid red; */
-    animation:rotate 3s linear forwards infinite;
-    transform-origin: bottom center;
-    z-index:100;
     position: absolute;
     top: -40px;
     left: 140px;
@@ -88,19 +113,22 @@ height: 320px;
     transform-origin: bottom center;
 }
 
-
-
 @keyframes rotate {
     from {
-        transform:rotate(0deg);
+        transform: rotate(0deg)
     }
     to {
-        transform:rotate(360deg);
-
+        transform:rotate(360deg)
     }
+    
 }
 
-circle {
+
+
+  
+  
+
+/* circle {
     stroke-width:20px;
     fill:transparent;
     stroke-dasharray:800;
@@ -114,9 +142,9 @@ circle {
 @keyframes offset {
     100% {
         /* 400 is 60 percentage of 800 */
-        stroke-dashoffset:480; 
+       /* stroke-dashoffset:480; 
 
-    }
+  /*  }
     0%{
         stroke-dashoffset:0;
 
@@ -130,4 +158,8 @@ svg  {
     top:10;
     right:0%;
     border:1px solid green;
-}
+} 
+
+/* ///////
+ */
+ 

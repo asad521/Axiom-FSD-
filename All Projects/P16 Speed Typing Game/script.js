@@ -6,9 +6,28 @@ const wordElement=document.getElementById('word');
 const scoreElement=document.getElementById('score');
 const gameover=document.getElementById('gameover ');
 const settings=document.getElementById('settings');
-const setting_button=document.getElementById('setting_button');
+const setting_button=document.getElementById('settingBtn');
 const form=document.getElementById('form');
 const difficulty=document.getElementById('difficulty');
+const start=document.getElementById('start');
+const screen=document.getElementById('screen');
+// const settingBtn=document.getElementById('settingBtn');
+console.log(settingBtn)
+let gameStart=false;
+console.log(start)
+start.addEventListener('click',()=>{
+    // screen.style.display="none";
+    screen.classList.add('remove');
+    setTimeout(()=>{
+        generateWord();
+        displayWord();
+        gameStart=true;
+
+    },1000)
+    
+
+
+})
 
 const words= ['asad','English','about','accept','communication','globalization','city',
 'welcome','newspaper','ability','able','circle','intelligent','destitute','urban','rular','serail',
@@ -21,28 +40,35 @@ const words= ['asad','English','about','accept','communication','globalization',
 let randomWord;
 // assinging intial values
 let initalScore=0;
-let initialTime=5;
+let initialTime=60;
 //getting the difiicult level from local storage and update
 let initalDifficulty=localStorage.getItem('difficulty') != null ? localStorage.getItem('difficulty') :'ease';
-console.log(initalDifficulty)
+// console.log(initalDifficulty)
 // render value for difficulty level drop down
 difficulty.value=initalDifficulty;
 // let initalDifficulty=;
 user_input.focus();
 //function of random word generation
-generateWord();
+
+
 function generateWord() {
+   
     const generateWord=words[Math.floor(Math.random()*words.length)]
     // console.log(generateWord);
     return generateWord;
+    
 }
-displayWord();
+
+
+
+
 //funtion to display random word
 function displayWord(){
     randomWord=generateWord();
-    console.log(randomWord)
+    // console.log(randomWord)
     //display on screen
     wordElement.innerText=randomWord;
+    
 
 }
 
@@ -51,7 +77,10 @@ user_input.addEventListener('input' ,e => {
     let userInput=e.target.value;
     console.log(userInput)
     //if user type correct word
+    console.log(randomWord)
     if (userInput===randomWord) {
+        console.log("condition met")
+        generateWord();
         displayWord();
         incrementScore();
         //if word is corrent ,also increast time
@@ -76,7 +105,8 @@ user_input.addEventListener('input' ,e => {
 function incrementScore() {
     
     initalScore++;
-    scoreElement.innerText=initalScore+"Point";
+    scoreElement.innerText= "Score-"+initalScore;
+    ;
 
 }
 
@@ -87,12 +117,15 @@ const timeInterval=setInterval(timeDecrement,1000);
 //timer fucntion
 
 function timeDecrement() {
+    if(gameStart) {
     initialTime--;
-    console.log(initialTime)
+    // console.log(initialTime)
     timeElement.innerText=initialTime +" sec";
     if (initialTime===0) {
         clearInterval(timeInterval);
         showGameover();
+    }} else {
+        //do nothing
     }
 }
 

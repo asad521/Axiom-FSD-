@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+</style>
 * {
     box-sizing: border-box;
     padding:0;
@@ -7,18 +8,139 @@
 
 }
 
+
 body {
-    background:rgb(14, 18, 78);
-    color:white;
-    font-family: 'Noto Sans HK', sans-serif;
-    font-family: 'Rubik', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
+    background:rgb(159, 159, 211);
+    color:black;
+    font-family: 'Lobster', cursive;
+        display:flex;
+        
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    min-width: 100vh;
+    padding:10px;
 }
-.container {
-    display:flex;
-    flex-direction:column;
+h2   {
+    margin:2rem;
+
+
 }
 
+
 #myCanvas {
-    background-color:white;
+    background-color:#141824;
+    width:90vw;
+    height:90vh;
+    border-radius: 10px;
 }
+ 
+
+/* For Starting Screen */
+.screen {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:aqua;
+    background-color:rgba(0,0,0,.7);
+    z-index: 3000;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    color:aqua;
+    transition:all .5s ease-in-out ;   
+}
+.screen.remove {
+    transform:translateY(-100%)
+
+}
+
+.screen p {
+    margin:5rem;
+    font-size: 2rem;
+    text-align: justify;
+
+
+}
+.start, .settingBtn {
+    width:200px;
+    height:80px;
+    font-size: 20px;
+    z-index: 100;
+    font-style: bold;
+    background-color: #00303f;
+    color:aqua;
+     margin-right: 5rem;
+     border-radius: 15px;
+     box-shadow: inset 0 0 0 0 #6eee78;
+     transition: ease-out 0.4s;
+  
+}
+.start:hover{
+    box-shadow: inset 400px 0 0 0 aqua;
+    color:black;
+
+  }
+    
+  .settingBtn:hover {
+    box-shadow: inset 400px 50px 0 0 #4fe5ff;
+    outline:none;
+    color:black;
+  }
+/* Below is added for gameOver */
+.gameover {
+    background-color: rgba(1,1,1,.6);
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding:10px;
+    margin:20px;
+}
+.gameover h2 {
+    margin:20px;
+    font-size: 60px;
+}
+.gameover button {
+    margin:20px;
+    font-size: 30px;
+    padding:5px;
+    width:200px;
+    height:50px;
+    border-radius: 5px;
+    color: black;
+    background-color:#b2ddee;
+    box-shadow: inset 0 0 0 0 #6eee78;
+    transition: ease-out 0.4s;
+
+
+}
+
+.gameover button:hover {
+    transition: ease-out 0.4s;
+    box-shadow: inset 0 100px 0 0 #6eee78;
+  }
+.gameover p {
+    margin:20px;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
