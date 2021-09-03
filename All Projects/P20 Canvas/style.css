@@ -19,20 +19,15 @@ body {
     align-items:center;
     flex-direction: column;
     min-width: 100vh;
-    padding:10px;
+    overflow:hidden;
 }
-h2   {
-    margin:2rem;
-
-
-}
-
 
 #myCanvas {
     background-color:#141824;
     width:90vw;
     height:90vh;
     border-radius: 10px;
+    padding:20px;
 }
  
 
@@ -45,12 +40,12 @@ h2   {
     width:100%;
     background-color:aqua;
     background-color:rgba(0,0,0,.7);
-    z-index: 3000;
+    z-index: 7;
     display:flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    color:aqua;
+    color:#FF6A3D;
     transition:all .5s ease-in-out ;   
 }
 .screen.remove {
@@ -69,10 +64,10 @@ h2   {
     width:200px;
     height:80px;
     font-size: 20px;
-    z-index: 100;
+    z-index: 4;
     font-style: bold;
-    background-color: #00303f;
-    color:aqua;
+    background-color: #FFB830;
+    color:BLACK;
      margin-right: 5rem;
      border-radius: 15px;
      box-shadow: inset 0 0 0 0 #6eee78;
@@ -91,8 +86,10 @@ h2   {
     color:black;
   }
 /* Below is added for gameOver */
-.gameover {
+ .gameover {
     background-color: rgba(1,1,1,.6);
+    top:0;
+    left:0;
     position:absolute;
     width:100%;
     height:100%;
@@ -103,15 +100,9 @@ h2   {
     flex-direction:column;
     justify-content:center;
     align-items: center;
-    padding:10px;
-    margin:20px;
-}
-.gameover h2 {
-    margin:20px;
-    font-size: 60px;
+    z-index:8;
 }
 .gameover button {
-    margin:20px;
     font-size: 30px;
     padding:5px;
     width:200px;
@@ -121,6 +112,7 @@ h2   {
     background-color:#b2ddee;
     box-shadow: inset 0 0 0 0 #6eee78;
     transition: ease-out 0.4s;
+    z-index:9;
 
 
 }
@@ -133,14 +125,39 @@ h2   {
     margin:20px;
     font-size: 20px;
     padding:10px;
-    border-radius: 5px;
+    border-radius: 5px; 
+    }
 
+/* Below is for settings panel */
+
+.settingScreen {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    background-color:#FF6A3D;
+    transform:translateX(   150%);
+    z-index: 999;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition:transform 1s ease-in ;
+
+    
 }
 
 
+select {
+    width:150px;
+    height:40px;
+    border-radius:5px;
+    margin-left:10px;
+    padding:5px;
+}
+
+.settingScreen.show {
+    transform:translateX(0%);
 
 
-
-
-
-
+}

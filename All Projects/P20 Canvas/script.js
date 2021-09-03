@@ -5,44 +5,84 @@
 const difficulty=document.getElementById('difficulty');
 const start=document.getElementById('start');
 const screen=document.getElementById('screen');
+const gameOver=document.getElementById('gameover');
+const reset=document.getElementById('reset');
+const settingBtn=document.getElementById('settingBtn');
+const settingScreen=document.getElementById('settingScreen');
+const difficultyLevel=document.querySelector('select')
 // const settingBtn=document.getElementById('settingBtn');
-console.log(settingBtn)
+var dx = 1; //variable x for moving default
+var dy = -2;//variable y for moving default
+let dLevel = 'easy';
+difficultyLevel.addEventListener('change',(e)=>{
+     dLevel=e.target.value;
+    console.log( dLevel)
+    if (dLevel=="hard") {
+        console.log('trigger hard level')
+         dx = 3; //variable x for moving
+         dy = -4;//variable y for moving
+    } else if (dLevel==='medium') {
+        console.log('trigger medium level')
+         dx = 2; //variable x for moving
+         dy = -3;//variable y for moving
+    } else {
+        console.log('trigger easy level')
+         dx = 1; //variable x for moving default
+         dy = -2;//variable y for moving default
+    }
+})
+console.log(difficultyLevel)
 let gameStart=false;
-console.log(start)
+console.log(reset)
+start.addEventListener('click',()=>{
+    // screen.classList.add('remove');
+    screen.style.transform="translateY(-100%)";
+    setTimeout(()=>{gameStart='true'; //delay untill start screen is removed
+},1000)
+    console.log(start)
 
+})
+reset.addEventListener('click',() => {
+    window.location.reload();
+    // screen.style.transform="translateY(0%)";
 
+    
+})
+settingBtn.addEventListener('click',() => {
+    settingScreen.classList.toggle('show') ; 
+    console.log(settingScreen)  
+})
 
 // Above is Added for Start Screen
 const canvas = document.getElementById("myCanvas");
 var cts = canvas.getContext('2d');
 cts.fillStyle = 'red';
-
 cts.fill()
 //  to draw any rectangle
-cts.beginPath();
-cts.rect(20, 40, 50, 50);
-cts.fillStyle = 'red';
-cts.fill();
-cts.closePath();
+// cts.beginPath();
+// cts.rect(20, 40, 50, 50);
+// cts.fillStyle = 'red';
+// cts.fill();
+// cts.closePath();
 
 //  to draw any circle
-cts.beginPath();
-cts.arc(166, 200, 70, 0, Math.PI * 2, false);
-cts.fillStyle = 'blue';
-cts.fill();
+// cts.beginPath();
+// cts.arc(166, 200, 70, 0, Math.PI * 2, false);
+// cts.fillStyle = 'blue';
+// cts.fill();
 // cts.strokeStyle = 'white';
-cts.stroke();
-cts.closePath();
+// cts.stroke();
+// cts.closePath();
 //draw paddel parameter
 var paddleHeight = 30;
 var paddleWidth = 70;
 var paddleX = (canvas.width - paddleWidth) / 2; //place center at center of canwas width
 console.log('width of canvwas' + canvas.height )
 // function to draw the ball continously
-var x = canvas.width / 6;
-var y = canvas.height / 6;
-var dx = 1; //variable x for moving
-var dy = -2;//variable y for moving
+var x = canvas.width /5;
+var y = canvas.height -50;
+
+
 ballRadius = 10;
 //brick variable 
 var brickRows=4;
@@ -123,6 +163,7 @@ function drawBall() {
 
 //how to draw the ball .first clear everything in rect for giving heigh/width
 function draw() {
+    if(gameStart){
     cts.clearRect(0, 0, canvas.width, canvas.height)
     drawBricks();
     drawBall();
@@ -158,14 +199,22 @@ function draw() {
         else if (y > canvas.height - ballRadius ) {
             // showGameover();
 
-            alert("GAME OVER");
-            window.location.reload();
+            // alert("GAME OVER");
+            gameEnd();
+
+            // window.location.reload();
             clearInterval(interval);
         }
     }
-    
+   
+    function gameEnd(){
+        gameOver.style.display='flex';
 
+             console.log('23423')
+    }
 
+ 
+ 
     x += dx;
     y += dy;
 
@@ -187,7 +236,7 @@ function draw() {
     }
     // console.log('position of paddle=>' + paddleX)
     // console.log('position of ballx=>' + x)
-}
+}}
 var interval = setInterval(draw, 5);
 
 // setInterval((draw(x,y)),10)

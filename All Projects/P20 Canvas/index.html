@@ -25,11 +25,20 @@
     </div>
     </div>
     <!-- <h2>Play the Game and Win Coins</h2> -->
-    <canvas id="myCanvas" width="500" height="700"></canvas>
+    <div class="settingScreen" id="settingScreen">
+        <label for="option">Please Select the difficulty level.</label>
+        <select>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <canvas id="myCanvas" width="500" height="600"></canvas>
 
-    
-
-    <div class="gameover" id="gamevoer"></div>
+    <div class="gameover" id="gameover">
+        <p>Oops. You have Lost.Press the Reset Button to Start Again.</p>
+        <button id="reset">Reset</button>
+    </div>
 
 
     <script src="script.js"></script>
