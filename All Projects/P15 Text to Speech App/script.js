@@ -111,6 +111,8 @@ function creatGrid () {
 // toggel text box window 
 togleBtn.addEventListener('click', e => {
     textBox.classList.toggle('show');
+    console.log(textBox)
+
 })
 
 // close text box window 
