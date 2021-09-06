@@ -3,13 +3,13 @@ const check=document.getElementById('checkBtn');
 console.log(list)
 //correct list item
 const richestPeople = [
-    'Jeff Bezos',
-    'Bill Gates',
-    'Wareen Buffet',
-    'Mark ZuckerBurg',
-    'Larry Ellision',
-    'Bernard Arnault',
-    'Lary Page',
+    'Russia',
+    'Canada',
+    'USA',
+    'Brazil',
+    'Australia',
+    'India',
+    'Argentina',
 ]
 //store list items
 const listItems =[];

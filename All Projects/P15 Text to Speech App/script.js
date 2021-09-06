@@ -10,51 +10,51 @@ console.log(voiceSelect)
 const data = [
     {
         image:'./images/1 (1).jpg',
-        text:"I' am hungy"
+        text:"This is Buffalo"
     },
     {
         image:'./images/1 (2).jpg',
-        text:"I' am hungy"
+        text:"This is Bird"
     },
     {
         image:'./images/1 (3).jpg',
-        text:"I' am hungy"
+        text:"This is Galaxy"
     },
     {
         image:'./images/1 (4).jpg',
-        text:"I' am hungy"
+        text:"This is car"
     },
     {
         image:'./images/1 (5).jpg',
-        text:"I' am hungy"
+        text:"Man is working on computer."
     },
     {
         image:'./images/1 (6).jpg',
-        text:"I' am hungy"
+        text:"Coffee is being Served in Hotel."
     },
     {
         image:'./images/1 (7).jpg',
-        text:"I' am hungy"
+        text:"Picture of a lion"
     },
     {
         image:'./images/1 (8).jpg',
-        text:"I' am hungy"
+        text:"This shows Work space."
     },
     {
         image:'./images/1 (9).jpg',
-        text:"I' am hungy"
+        text:"Picture of a plant."
     },
     {
         image:'./images/1 (10).jpg',
-        text:"I' am hungy"
+        text:"This is food."
     },
     {
         image:'./images/1 (11).jpg',
-        text:"I' am hungy"
+        text:"This is icecream."
     },
     {
         image:'./images/1 (12).jpg',
-        text:"I' am hungy"
+        text:"This is foldable Sleekbook."
     },
     
 ]
