@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+/*  */
+header {
+    background-color:red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+}
+
+/* for overlay on a backgroud */
+
+header::after {
+    position: absolute;
+    content:'';
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,.6 )
+}
+/* bring everything on front while overlay is at back */
+header * {
+    z-index:2;
+}
+h1 {
+    background-color:green;
+}
+
+
+
+
+
+body {
+    background:#9068be;
+    color:white;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.container {
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:10px;
+/* border:1px solid red; */
+width:100%;
+height: 90%;
+}
+
+input,label {
+    padding:5px;
+}
+
+
+
+.radioBtn {
+    padding:10px;
+}
+input{
+    border-radius: 25px;
+}
+.user1,.user2 {
+    margin:10px;
+}
+.user2 {
+    display: none;
+}
+.user2.show {
+    display: flex;
+}
+
+.userInputContainer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+}
+
+.lyricsContainer  {
+    /* border:1px solid rgb(110, 236, 106); */
+    background-color:#6ed3cf;
+    display:flex;
+    justify-content:left;
+    align-items:left;
+    flex-direction: column;
+    text-align: justify;
+    font-size:12px;
+    width:40%;
+    height:80%;
+    max-width: 80%;
+    list-style: none;
+    padding:10px;
+    border-radius:5px;
+    white-space: wrap;
+    overflow:wrap;
+    text-overflow: ellipsis;
+    color:rgb(6, 5, 37);
+}
+
+.pageBtnContainer {
+    display:inline;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    /* background-color: antiquewhite; */
+    width:80%;
+    margin:20px;
+    padding:10px;
+    
+    
+}
+
+.pageBtn {
+    font-size:20px;
+    margin:5px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-weight:bold;
+    background-color:green;
+    display:inline;
+
+}
+
+.pageBtn:hover {
+    background-color: greenyellow
+
+}
+
+.pageBtn.active {
+    background-color: greenyellow;
+    color:white;
+
+}
+
+/* pagination box */
+
+.container_2 {
+    background:rgb(160, 162, 182);
+    color:black;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.task-list {
+    background-color:rgb(aqua);
+    border:1px solid red;
+    width:300px;
+    height:400px;
+}
+.tabs {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    padding:10px;
+    margin:10px;
+}
+.first,.next,.previous,.last {
+    margin:5px;
+    border:1px solid green;
+}
+.first:hover,.next:hover,.previous:hover,.last:hover {
+    margin:5px;
+    font-style:underline;
+    text-shadow: 0px 1px 0px black;
+    border:none;
+}
+
+.first,.next,.previous,.last {
+    color:;
+    background-color:#e62739;
+    border-radius:25px;
+    height:30px;
+    width:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 16px;
+    
+
+}
+
+.btn {
+    background-color:#9068be;
+    color:black;
+
+}
+
+ul.songs {
+    list-style-type:none;
+}
+
+ul.songs li{
+    display:flex;
+    align-items: flex;
+    justify-content:center;
+}
+
+.container {
+    margin:30px;
+    background-color:#e62739;
+    border:1px solid aqua;
+}
+
+.container h2 {
+    font-weight: 300;
+}
+
+.container p {
+    text-align: center;
+}
+ .centered {
+     display:flex;
+     justify-content:left;
+     background-color:rgb(20, 92, 50);
+
+ }
+.centered button {
+    background-color:aquamarine;
+}
+
+

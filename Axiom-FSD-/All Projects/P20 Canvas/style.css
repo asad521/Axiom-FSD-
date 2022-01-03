@@ -1,0 +1,163 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+</style>
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+
+body {
+    background:rgb(159, 159, 211);
+    color:black;
+    font-family: 'Lobster', cursive;
+        display:flex;
+        
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    min-width: 100vh;
+    overflow:hidden;
+}
+
+#myCanvas {
+    background-color:#141824;
+    width:90vw;
+    height:90vh;
+    border-radius: 10px;
+    padding:20px;
+}
+ 
+
+/* For Starting Screen */
+.screen {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:aqua;
+    background-color:rgba(0,0,0,.7);
+    z-index: 7;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    color:#FF6A3D;
+    transition:all .5s ease-in-out ;   
+}
+.screen.remove {
+    transform:translateY(-100%)
+
+}
+
+.screen p {
+    margin:5rem;
+    font-size: 2rem;
+    text-align: justify;
+
+
+}
+.start, .settingBtn {
+    width:200px;
+    height:80px;
+    font-size: 20px;
+    z-index: 4;
+    font-style: bold;
+    background-color: #FFB830;
+    color:BLACK;
+     margin-right: 5rem;
+     border-radius: 15px;
+     box-shadow: inset 0 0 0 0 #6eee78;
+     transition: ease-out 0.4s;
+  
+}
+.start:hover{
+    box-shadow: inset 400px 0 0 0 aqua;
+    color:black;
+
+  }
+    
+  .settingBtn:hover {
+    box-shadow: inset 400px 50px 0 0 #4fe5ff;
+    outline:none;
+    color:black;
+  }
+/* Below is added for gameOver */
+ .gameover {
+    background-color: rgba(1,1,1,.6);
+    top:0;
+    left:0;
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    z-index:8;
+}
+.gameover button {
+    font-size: 30px;
+    padding:5px;
+    width:200px;
+    height:50px;
+    border-radius: 5px;
+    color: black;
+    background-color:#b2ddee;
+    box-shadow: inset 0 0 0 0 #6eee78;
+    transition: ease-out 0.4s;
+    z-index:9;
+
+
+}
+
+.gameover button:hover {
+    transition: ease-out 0.4s;
+    box-shadow: inset 0 100px 0 0 #6eee78;
+  }
+.gameover p {
+    margin:20px;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 5px; 
+    }
+
+/* Below is for settings panel */
+
+.settingScreen {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    background-color:#FF6A3D;
+    transform:translateX(   150%);
+    z-index: 999;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition:transform 1s ease-in ;
+
+    
+}
+
+
+select {
+    width:150px;
+    height:40px;
+    border-radius:5px;
+    margin-left:10px;
+    padding:5px;
+}
+
+.settingScreen.show {
+    transform:translateX(0%);
+
+
+}

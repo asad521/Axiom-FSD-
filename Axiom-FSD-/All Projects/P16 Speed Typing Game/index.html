@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-	awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Game</title>
+</head>
+<body>
+<div class="screen" id="screen">
+    
+    <P>Welcome to the Game.Type as fast as you can.Default Keybaord is based on US-International standard. There are three settings.Easy,Medium & Hard. On each correct  word, 
+        You will gain 1 score and 1 sec will be added to you remaining time if difficulty level=Hard.3sec are added if difficulty level=Easy</P>
+    <div class="screenCtrl">
+    <button class="start" id="start">
+        <i class="fa fa-tools"></i>Start 
+    </button>
+    <button class="settingBtn" id="settingBtn">
+        <i class="fa fa-tools"></i>Settings 
+    </button>
+</div>
+</div>
+
+
+<!-- <button class="setting_button" id="setting_button">
+    <i class="fa fa-tools"></i>Setting 
+</button> -->
+<!-- setting  -->
+<div class="settings " id="settings">
+    <!-- form for user input -->
+    <form action="" id="form" class="form">
+    <label for="difficulty">Select Difficulty Level</label>
+    <select  id="difficulty" class="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    </form>
+</div>
+<div class="container">
+ <h2>Fast Typing Game</h2>
+ <p>Type the words as fast as you can </p>
+ <h1 class="word" id="word">Sample Word</h1>
+ <!-- input field for typing by user -->
+ <input type="text" class="user_input" id="user_input" placeholder="Please Type Here" autocomplete="off">
+<!-- f control -->
+<p class="timer" id="timer">
+    Time Remaining: <span class="time" id="time"></span>
+</p>
+
+<!-- score control -->
+     <span class="score" id="score">Score-0</span>
+</div>
+
+
+<!-- Game Loss/Winn -->
+<div class="gameover" id="gamevoer"></div>
+
+        <script src="script.js"></script>
+
+</body>
+</html>

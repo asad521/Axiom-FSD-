@@ -1,0 +1,19 @@
+ .container {
+     display:flex;
+     flex-direction:column;
+     justify-content: flex-start;
+     /* border:1px solid red; */
+     width:50%;
+     height:600px;
+     margin:0 auto;
+     flex-wrap: wrap;
+     overflow:scroll;
+     flex:1;
+ }
+ .elementt{
+     border:1px solid red;
+     display:inline;
+
+ }
+
+

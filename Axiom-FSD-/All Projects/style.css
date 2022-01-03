@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    color:rgb(230, 230, 230);
+    font-family: 'Farro', sans-serif;
+}
+.container {
+    display:flex;
+
+
+}
+.mainProjects,.smallprojects {
+    border:1px solid rgb(0, 0, 0);
+    margin:5px;
+    padding:10px;
+    box-shadow: 1px 1px black;
+}
+h1 {
+    margin:20px;
+    font-size:4vh;
+    /* text-shadow: 0 0 15px black; */
+    text-align: center;
+    color:white;
+}
+li {
+    list-style: none;
+}
+
+a {
+color:rgb(255, 255, 255);
+font-size:2vh;
+}
+@media(max-width: 450px) {
+    a {
+        font-size:1.5vh;
+        }
+        h1 {
+            margin-bottom:20px;
+            font-size:3vh;
+            text-shadow: 0 0 15px black;
+            text-align: center;
+        }
+}
+
+
+
+/* a::before {
+    content: "";
+    background-color: red;
+    width: 10px;
+    height: 10px;
+} */
+
+a:before {
+    font-family: FontAwesome;
+    content: "\f101     ";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-size: 3vh;
+
+}
+p {
+    position: absolute;
+    bottom:2%;
+    margin:20px;
+    padding:10px;
+    font-size: 2vh;
+    background:transparent;
+
+}

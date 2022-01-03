@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+
+   
+  background-image:url("./newyear.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kaisei HarunoUmi', serif;
+  position:relative;
+}
+h1 {
+font-size:4rem;
+padding:1rem;
+}
+.container {
+    display:flex;
+    flex-direction:column;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding:1rem; */
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin:1rem;
+  font-size:1.5rem;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .loader {
+    border-top: 16px solid rgb(30, 30, 255);
+    border-right: 16px solid rgb(255, 34, 34);
+    border-left: 16px solid rgb(74, 248, 31);
+    border-bottom: 16px solid yellow;
+  }
+
+  .countdown {
+      display:none;
+  }
+
+  .year {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translate(-50% ,0);
+    /* background-color:white; */
+    font-size: 10rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    z-index: -3;
+
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+
+  }

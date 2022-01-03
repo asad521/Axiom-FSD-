@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Meal Finder</title>
+</head>
+
+<body>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <h1>Music Player</h1>
+
+    <!-- container for music container -->
+
+    <div class="container " id="container">
+        <!-- contaoiner for info about music -->
+        <div class="info">
+            <!-- Name of current songs PH -->
+            <h4 id="song_title">Name of Song</h4>
+            <!-- Progress bar -->
+        </div>
+        <div class="progress" id="progress">
+            <div class="progressBar" id="progressBar"></div>
+        </div>
+                
+        <!-- Media Player is here -->
+        <audio src="music/" id="audio"></audio>
+        <!-- Album artist  -->
+        <div class="album">
+            <img src="images/" alt="album" id="album">
+        </div>
+        <!-- button navigation -->
+        <div class="nav">
+            <!-- previous buttion -->
+            <button id="previous" class="nav_button">
+                <i class="fa fa-backward"></i>
+            </button>
+            <!-- play/pause buttion -->
+            <button id="play" class="nav_button_large">
+                <i class="fa fa-play"></i>
+            </button>
+            <!-- next buttion -->
+            <button id="next" class="nav_button">
+                <i class="fa fa-forward"></i>
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

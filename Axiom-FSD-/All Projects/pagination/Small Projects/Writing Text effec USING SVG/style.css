@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body {
+  display:grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+#svgGroup  {
+
+  animation:fill 3s ease forwards 1s;
+ 
+
+}
+
+.svgContainer {
+  background:rgba(14, 9, 9, 0.507);
+  display:inline-block;
+
+
+}
+
+
+#svgGroup path:nth-child(1) {
+  stroke-dasharray: 1723.2684326171875px;
+  stroke-dashoffset: 1723.2684326171875px;
+  animation:  one 5s ease forwards;
+  
+ 
+}
+
+
+
+#svgGroup path:nth-child(1){
+  /* transform: rotate(15deg); */
+  animation:  one 5s ease forwards, rot 1s ease forwards 2s, swing 1s ease forwards 3s;
+
+}
+
+
+@keyframes rot {
+  from {
+    transform:rotate(0deg);
+    
+  }
+  to {
+    transform-origin: top left;
+        /* transform:scaleY(); */
+    transform:translateX(20%);
+    transform:rotate(-44deg);
+
+  }  
+ } 
+
+ @keyframes t {
+  from {
+    transform:translateX(0%);
+    
+  }
+  to {
+    transform:translateX(-25%);
+
+
+  }  
+ } 
+
+ @keyframes tt {
+  from {
+    transform:translateX(0%);
+    
+  }
+  to {
+    transform:translateX(-28%);
+    fill:rgb(23, 255, 224);
+
+
+
+  }  
+ } 
+
+ @keyframes ttt {
+  from {
+    transform:translateX(0%);
+    
+  }
+  to {
+    transform:translateX(-18%);
+    fill:rgb(23, 255, 224);
+
+
+
+  }  
+ } 
+
+  @keyframes tttt {
+  from {
+    transform:translateX(0%);
+    
+  }
+  to {
+    transform:translateX(-20%);
+
+
+  }  
+ }  
+#svgGroup path:nth-child(2) {
+  stroke-dasharray: 1252.9140625px;
+  stroke-dashoffset:1252.9140625px;
+  animation:  line-anim 5.3s ease-in-out forwards;
+
+
+}
+#svgGroup path:nth-child(3) {
+  stroke-dasharray: 995.4067993164062px;
+  stroke-dashoffset: 995.4067993164062px;
+  animation:  line-anim 5.6s ease-in-out forwards;
+
+}
+#svgGroup path:nth-child(4) {
+  stroke-dasharray: 1252.9141845703125px;
+  stroke-dashoffset: 1252.9141845703125px;
+  animation:  line-anim 5.9s ease-in-out forwards, t 1s ease forwards 1s;
+
+}
+#svgGroup path:nth-child(5) {
+  stroke-dasharray: 1424.170166015625px;
+  stroke-dashoffset: 1424.170166015625px;
+  animation:  line-anim 6.1s ease-in-out forwards;
+
+}
+#svgGroup path:nth-child(6) {
+  stroke-dasharray: 1252.9144287109375px;
+  stroke-dashoffset: 1252.9144287109375px;
+  animation:  line-anim 6.4s ease-in-out forwards,tt 1s ease forwards 1s;
+}
+#svgGroup path:nth-child(7) {
+  stroke-dasharray: 765.994873046875px;
+  stroke-dashoffset: 765.994873046875px;
+  animation:  line-anim 6.7s ease-in-out forwards,ttt 1s ease forwards 1s;
+
+}
+#svgGroup path:nth-child(8) {
+  stroke-dasharray: 647.9224853515625px;
+  stroke-dashoffset: 647.9224853515625px;
+  animation:  line-anim 7s ease-in-out forwards,tttt 1s ease forwards 1s;;
+
+}
+
+@keyframes line-anim {
+  to {
+
+    stroke-dashoffset: 0;
+    stroke-width:0.1mm;
+  } 
+}
+
+
+    /* first element */
+    @keyframes one {
+      from {
+       fill:transparent;
+       
+     }
+     to {
+       fill:rgb(23, 255, 224);
+      } 
+ 
+
+     } 
+     @keyframes fill {
+      from {
+       fill:transparent;
+     }
+     to {
+       fill:rgb(41, 24, 114); 
+     } 
+     } 
+
+  
+
+
+     .swing {
+      -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+      transform-origin: top center;
+      -webkit-animation-name: swing;
+      animation-name: swing;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      }
+      @-webkit-keyframes swing {
+      20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+      }
+      40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+      }
+      60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+      }
+      80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+      }
+      100% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+      }
+      }
+      @keyframes swing {
+      20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+      }
+      40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+      }
+      60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+      }
+      80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+      }
+      100% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+      }
+      }

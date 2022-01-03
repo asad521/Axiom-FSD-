@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+body {
+    background:#ECD8E0;
+    color:#2A3166;
+    font-family: 'PT Sans', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.screen {
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:rgba(202, 231, 223,.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+button {
+    background-color:rgba(202, 231, 223,1);
+    border:none;
+    width:150px;
+    height:80px;
+    border:1px solid black;
+    border-radius: 5px;  
+}
+img {
+    width:350px;
+    height:350px;
+    border-radius:5px;
+    box-shadow: 1px 5px 10px black;
+}
+
+
+.container {
+    display:flex;
+    flex-direction:column;
+}
+
+h1 {
+    padding:1rem;
+    margin-top:1rem;
+}
+h3 {
+    margin:.5rem;
+
+}

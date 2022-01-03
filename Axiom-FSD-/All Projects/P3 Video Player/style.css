@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    
+}
+h1 {
+    color:rgb(158, 223, 243);
+}
+
+.screen {
+    cursor: pointer;
+    width: 60%;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.controls {
+    background:rgb(0,0,0,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    width:60%;
+    padding:10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.progress {
+    width:100%;
+
+}
+
+.fa.fa-play ,.fa.fa-stop, .fa.fa-pause {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    line-height: 45px;
+    text-align:center;
+    font-size:25px;
+    background:transparent  ;
+    text-shadow:1px 2px 0px black;
+
+}
+
+
+
+.fa.fa-play  {
+    background:#05c905;
+}
+
+.fa.fa-stop  {
+    background:rgb(156, 19, 1);
+}
+
+.fa.fa-pause  {
+    background:rgba(0, 158, 8, 0.295);
+    
+}
+
+
+
+
+.controls .btn {
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:white;
+    padding:4px;
+}
+
+
+
+.timestamp {
+    padding:3px;
+    cursor:pointer;
+}
+@media(max-width: 800px) {
+    .screen, .controls {
+        width: 90%;
+    }
+}

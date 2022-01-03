@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="teststyle.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="container">
+            <form  id="form" class="form">
+                <h2 id="k">Sign Up Form</h2>
+
+                    <div class="form-control">
+                        <label for="username">User Name</label>
+                        <input type="text" id="username" placeholder="Enter Your Name">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control ">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter Your Email">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Your Password">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control"> 
+                        <label for="password confirmation">Confirm Password</label>
+                        <input type="password" id="password confirmation" placeholder="Confrim Your Password">
+                        <small>Error Message</small>
+                    </div>
+                    <button >Click to Submit</button>
+                    <h3>Or Login in with</h3>               
+                    <div class="icons-container">  
+                        <div class="fb-container">
+                                <a href="#" class="fb" id="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="google-container">
+                          <a href="#" class="google" id="google" title="Join us on Facebook"><i class="fa fa-google" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="yahoo-container">
+                          <a href="#" class="yahoo" id="yahoo" title="Join us on Facebook"><i class="fa fa-yahoo" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    
+            </form>
+    </div>
+    <script src="testscript.js"></script>
+</body>
+</html>

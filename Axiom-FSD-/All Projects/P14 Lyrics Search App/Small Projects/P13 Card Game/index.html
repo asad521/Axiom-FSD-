@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-	awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Card </title>
+</head>
+
+<body>
+    <h1>Memomry Card Application</h1>
+    <div class="add_new_card" id="add_new_card">
+        <h2>Memory Cards:
+            <button class="plus" id="plus">
+                <i class="fa fa-plus"></i>
+            </button>
+            <button class="remove" id="remove">
+                <i class="fa fa-trash"></i>
+            </button>
+        </h2>
+    </div>
+    <!-- container for cards -->
+    <div class="flip-card" id="flip-card">
+        <div class="flip-card-inner" id="flip-card-inner" >
+            <!-- <div class="flip-card-front" id="flip-card-front">
+                <p>This is front of card</p>
+            </div>
+            <div class="flip-card-back" id="flip-card-back">
+                <p>This is back of card</p>
+            </div> -->
+        </div>
+        <!-- navigation for next and previous card below flipcard-->
+  
+    </div>
+    <div class="nav">
+        <!-- previous buttion -->
+        <button class="previous" id="previous">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+        <!-- next buttion -->
+        <button class="next" id="next">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+    <span>0/0</span>
+
+
+
+    <!-- continaer for from to creat new card -->
+    <!-- From -->
+    <!-- Question -->
+    <div class="add_card_container" id="add_card_container">
+
+        <!-- question -->
+        <div class="input_container" id="input_container">
+            <h2>Add New Card:
+                <button class="remove_card" id="remove_card">
+                    <i class="fa fa-close"></i>
+                </button>
+            </h2>
+            <div class="question_container" id="question_container">
+                <label for="question"><h3>Question</h3></label>
+                <textarea name="" id="question" class="question" placeholder="Enter Question here"></textarea>
+            </div>
+            <!-- Answer -->
+            <div class="answer_container" id="answer_container">
+                <label for="Answer"><h3>Answer</h3></label>
+                <textarea name="" id="Answer" class="Answer" placeholder="Enter Answer here"></textarea>
+            </div>
+            <button class="submit" id="submit">
+                <i class="fa-fa-plus">Submit</i>
+            </button>
+        </div>
+    </div>
+    <!-- Submit -->
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

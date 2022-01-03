@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5db7f19119.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Book Your Ticket</title>
+</head>
+<body>
+
+    <div class="curved">
+        <h1>Your Dream Cinema<br> Experience</h1>
+        <!-- <svg  id="my-svg" version="1" baseProfile="full" width="100%" height="100%" viewBox="0 0 1536 754" xmlns="http://www.w3.org/2000/svg"><rect width="1536" height="754" fill="#000000"></rect><defs><linearGradient id="linear-gradient" x1="1" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#6955e790"></stop><stop offset="100%" stop-color="#0e163a90"></stop></linearGradient></defs><path transform="scale(1, 1)" d="M 0,754 V 0,452 C 120.67857142857144,467.3928571428571 241.3571428571429,482.7857142857143 378,488 C 514.6428571428571,493.2142857142857 667.2500000000001,488.24999999999994 785,439 C 902.7499999999999,389.75000000000006 985.6428571428571,296.2142857142857 1105,291 C 1224.357142857143,285.7857142857143 1380.1785714285716,368.8928571428571 1536,452 C 1536,452 1536,754 1536,754 Z" stroke="none" stroke-width="0" fill="url(#linear-gradient)" class="transition-all duration-300 ease-in-out delay-150" style="transform-origin: center center;"></path><defs><linearGradient id="linear-gradient" x1="1" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#6955e7ff"></stop><stop offset="100%" stop-color="#0e163aff"></stop></linearGradient></defs><path transform="scale(1, 1)" d="M 0,754 V 0,678 C 146,567.25 292,456.5 427,512 C 562,567.5 686,789.25 798,816 C 910,842.75 1010,674.5 1131,619 C 1252,563.5 1394,620.75 1536,678 C 1536,678 1536,754 1536,754 Z" stroke="none" stroke-width="0" fill="url(#linear-gradient)" class="transition-all duration-300 ease-in-out delay-150" style="transform-origin: center center;"></path></svg>     -->
+    </div>
+
+    <!-- now showing start -->
+    <h1 class="movie_status" id="ns">Now Showing</h1>
+    <!--now showing is flex box.It is first row.-->
+    <div class="now_showing"> 
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="1.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                <img src="1.jpg" alt="" id="Mortal Kombat">
+                <h2>Mortal Kombat</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube" ></i>
+                    <i class="fa fa-calendar-alt" ></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="2.jpg" alt="" id="Final Account"></p></div>
+                <div class="back">
+                <img src="2.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Final Account</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="3.jpg" alt="" id="Physcho"></p></div>
+                <div class="back">
+                <img src="1.jpg" alt="" id="Mortal Kombat">
+                <h2>Physcho</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="4.jpg" alt="" id="Moana"></p></div>
+                <div class="back">
+                <img src="4.jpg" alt="" id="Mortal Kombat">
+                <h2>MOANA</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="5.jpg" alt="" id="Fast & Furius 9"></p></div>
+                <div class="back">
+                    <img src="5.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Fast & Furious 9</h2>
+                <div class="font_awesome" id="youtube">
+                    <i class="fa fa-youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="6.jpg" alt="" id="Justice Leaguae"></p></div>
+                <div class="back">
+                    <img src="6.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Justice Leaguae</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- now showing end -->
+
+    <!-- 3d start here -->
+    <h1 class="movie_status" id="d3">3D</h1>
+    <!--now showing is flex box.It  first row.-->
+    <div class="d3"> 
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="7.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                    <img src="7.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Iron Man</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="8.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                    <img src="8.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Spider Man</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="9.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                    <img src="9.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Avengers</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="10.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                    <img src="10.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Casino Royale</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="11.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                    <img src="11.jpg" alt="" id="Mortal Kombat">
+
+                <h2>The Dark knight</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+        <!--card_container is 1 child of flex.   -->
+        <div class="card_container">
+            <div class="card">
+                <div class="front"><p><img src="12.jpg" alt="" id="Mortal Kombat"></p></div>
+                <div class="back">
+                    <img src="12.jpg" alt="" id="Mortal Kombat">
+
+                <h2>Joker</h2>
+                <div class="font_awesome">
+                    <i class="fa fa-youtube" id="youtube"></i>
+                    <i class="fa fa-calendar-alt"></i>
+                </div>
+                <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                the laws of nature in order to be successful in his mission.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- 3d end here -->
+
+        <!-- next week start here -->
+        <h1 class="movie_status" id="nw" >Next Week</h1>
+        <!--now showing is flex box.It is first row.-->
+        <div class="next_week" > 
+            <!--card_container is 1 child of flex.   -->
+            <div class="card_container">
+                <div class="card">
+                    <div class="front"><p><img src="13.jpg" alt="" id="Mortal Kombat"></p></div>
+                    <div class="back">
+                        <img src="13.jpg" alt="" id="Mortal Kombat">
+
+                    <h2>Interstellar</h2>
+                    <div class="font_awesome">
+                        <i class="fa fa-youtube" id="youtube"></i>
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                    the laws of nature in order to be successful in his mission.</p>
+                    </div>
+                </div>
+            </div>
+            <!--card_container is 1 child of flex.   -->
+            <div class="card_container">
+                <div class="card">
+                    <div class="front"><p><img src="14.jpg" alt="" id="Mortal Kombat"></p></div>
+                    <div class="back">
+                        <img src="14.jpg" alt="" id="Mortal Kombat">
+
+                    <h2>Inception</h2>
+                    <div class="font_awesome">
+                        <i class="fa fa-youtube" id="youtube"></i>
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                    the laws of nature in order to be successful in his mission.</p>
+                    </div>
+                </div>
+            </div>
+            <!--card_container is 1 child of flex.   -->
+            <div class="card_container">
+                <div class="card">
+                    <div class="front"><p><img src="15.jpg" alt="" id="Mortal Kombat"></p></div>
+                    <div class="back">
+                        <img src="15.jpg" alt="" id="Mortal Kombat">
+
+                    <h2>Blade Runner 2045</h2>
+                    <div class="font_awesome">
+                        <i class="fa fa-youtube" id="youtube"></i>
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                    the laws of nature in order to be successful in his mission.</p>
+                    </div>
+                </div>
+            </div>
+            <!--card_container is 1 child of flex.   -->
+            <div class="card_container">
+                <div class="card">
+                    <div class="front"><p><img src="16.jpg" alt="" id="Mortal Kombat"></p></div>
+                    <div class="back">
+                        <img src="16.jpg" alt="" id="Mortal Kombat">
+
+                    <h2>Parasite</h2>
+                    <div class="font_awesome">
+                        <i class="fa fa-youtube" id="youtube"></i>
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                    the laws of nature in order to be successful in his mission.</p>
+                    </div>
+                </div>
+            </div>
+            <!--card_container is 1 child of flex.   -->
+            <div class="card_container">
+                <div class="card">
+                    <div class="front"><p><img src="17.jpg" alt="" id="Mortal Kombat"></p></div>
+                    <div class="back">
+                        <img src="17.jpg" alt="" id="Mortal Kombat">
+
+                    <h2>Frozen</h2>
+                    <div class="font_awesome">
+                        <i class="fa fa-youtube" id="youtube"></i>
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                    the laws of nature in order to be successful in his mission.</p>
+                    </div>
+                </div>
+            </div>
+            <!--card_container is 1 child of flex.   -->
+            <div class="card_container">
+                <div class="card">
+                    <div class="front"><p><img src="18.jpg" alt="" id="Mortal Kombat"></p></div>
+                    <div class="back">
+                        <img src="18.jpg" alt="" id="Mortal Kombat">
+
+                    <h2>LA LA Land</h2>
+                    <div class="font_awesome">
+                        <i class="fa fa-youtube" id="youtube"></i>
+                        <i class="fa fa-calendar-alt"></i>
+                    </div>
+                    <p>A secret agent is given a single word as his weapon and sent to prevent the onset of World War III. He must travel through time and bend 
+                    the laws of nature in order to be successful in his mission.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- next_week end -->
+
+
+    <!-- ticket booking start here -->
+    
+    <div class="ticket" id="ticket">
+        <div class="ticket_booking">
+            <div class="movie_options_container">
+                <label for="movie">Your Selected Movie is: </label>
+                <select  id="movie_selector" >
+                    <option id='movie' value="10">Mortal Kombat ($10)</option>
+                    <option id='movie' value="20">Final Account ($20)</option>
+                    <option id='movie' value="30">Physcho ($30)</option>
+                    <option id='movie' value="40">MOANA ($40)</option>
+                    <option id='movie' value="50">F9 ($50)</option>
+                    <option id='movie' value="23">Justice Leaguae ($23)</option>
+                    <option id='movie' value="12">Iron Man ($12)</option>
+                    <option id='movie' value="26">Spider Man ($26)</option>
+                    <option id='movie' value="49">Avenger ($49)</option>
+                    <option id='movie' value="81">Casino Royale ($81)</option>
+                    <option id='movie' value="38">The Dark knight ($38)</option>
+                    <option id='movie' value="16">Joker ($16)</option>
+                    <option id='movie' value="25">Interstellar ($25)</option>
+                    <option id='movie' value="44">Inception ($44)</option>
+                    <option id='movie' value="32">Blade Runner 2045 ($32)</option>
+                    <option id='movie' value="17">Parasite ($17)</option>                   
+                     <option id='movie' value="11  ">Frozen ($11)</option>
+                    <option id='movie' value="5">LA LA Land ($5)</option>
+
+          
+                </select>
+            </div>
+        </div>
+
+            <div class="ticket_info_container">
+                <ul>
+                    <li>
+                        <div class="seat selected"></i></div>
+                        <small>Selected</small>
+                    </li>
+                    <li>
+                        <div class="seat reserved"></div>
+                        <small>Reserved</small>
+                    </li>
+                    <li>
+                        <div class="seat "></div>
+                        <small>Available</small>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- <div class="screen"></div> -->
+            <div class="ticket_container">
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat reserved"></div>
+                    <div class="seat reserved"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat reserved"></div>
+                    <div class="seat reserved"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat "></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat reserved"></div>
+                    <div class="seat reserved"></div>
+                </div>
+                <div class="row">
+                    <div class="seat reserved"></div>
+                    <div class="seat reserved"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+            </div>
+            <div class="last">
+                <div class="payment" id="payment"> Payment     <i class="fas fa-money-check-alt"></i></div>
+                <div class="cancel" id="cancel">Cancel</div>
+            </div>
+            <p>You have selected <span id="seat_count">0</span> seats for a price of <span id="seat_price"></span>$.</p>
+            <div class="reset" id="reset">Reset</div>
+
+        </div>
+     <!-- ticket booking start here -->
+    
+    <!-- Video player start here -->
+<div class="videoPlayer" id="videoPlayer">
+    <i class="fa fa-window-close fa-2x" id="close"></i>
+    <h1> Video Player</h1>    
+    <video src="video.mp4" id="video" class="window" poster=""
+    media="all and (max-width: 480px)" 
+    ></video>
+    <!-- adding custom control-->
+    <div class="controls" id="controls">
+        <!-- Adding play button -->
+        <button class="btn" id="play">
+            <i class="fa fa-play fa-2x"></i>
+        </button>
+        <!-- Adding stop button -->
+        <button class="btn" id="stop">
+            <i class="fa fa-stop fa-2x"></i>
+        </button>
+        <!-- Adding progress report-->
+        <input type="range" id="progress" class="progress"  min="0" max="100" step="0.1" value="0">
+        <span class="timestamp" id="timestamp">00:00</span>
+    </div> 
+</div>
+    <!-- Video player end here -->
+
+
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Project</title>
+</head>
+
+<body>
+    <h1>Hangman </h1>
+    <P>Find the hidden word-Enter a letter</P>
+    <div class="grid">
+        <div class="figure">
+            <svg class="figureContainer" height="250" width="200">
+                <!-- horizental/vertical end/vertical main/base -->
+                <line x1="28" y1="20" x2="120" y2="20" />
+                <line x1="120" y1="18" x2="120" y2="30" />
+                <line x1="30" y1="20" x2="30" y2="240" />
+                <line x1="0" y1="240" x2="60" y2="240" />
+                <!-- cicle -->
+                <circle class="figure-part" cx="120" cy="50" r="20" />
+                <!-- body -->
+                <line class="figure-part" x1="120" y1="70" x2="120" y2="200" />
+                <!-- hand l/r -->
+                <line class="figure-part" x1="120" y1="100" x2="160" y2="120" />
+                <line class="figure-part" x1="120" y1="100" x2="80" y2="120" />
+
+                <!-- legs l/r-->
+                <line class="figure-part" x1="120" y1="160" x2="80" y2="180" />
+                <line class="figure-part" x1="120" y1="160" x2="160" y2="180" />
+            </svg>
+        </div>
+        <div class="wrongLetterContainer" id="wrongLetterContainer">
+            <p>Wrong Letters</p>
+            <span></span>
+        </div>
+        <div class="words" id="words">
+        </div>
+
+    </div>
+
+    <div class="popupContainer" id="popupContainer">
+        <div class="popup">
+            <h3></h3>
+            <button class="play">Play Again</button>
+        </div>
+    </div>
+
+
+    <div class="notification" id="notification">
+        <p>You have already entered this letter. </p>
+    </div>
+    <div class="alpha" id="alpha">
+        <button class="button">a</button>
+        <button class="button">b</button>
+        <button class="button">c</button>
+        <button class="button">c</button>
+        <button class="button">d</button>
+        <button class="button">e</button>
+        <button class="button">f</button>
+        <button class="button">g</button>
+        <button class="button">h</button>
+        <button class="button">i</button>
+        <button class="button">j</button>
+        <button class="button">k</button>
+        <button class="button">l</button>
+        <button class="button">m</button>
+        <button class="button">n</button>
+        <button class="button">o</button>
+        <button class="button">p</button>
+        <button class="button">q</button>
+        <button class="button">r</button>
+        <button class="button">s</button>
+        <button class="button">t</button>
+        <button class="button">u</button>
+        <button class="button">v</button>
+        <button class="button">w</button>
+        <button class="button">x</button>
+        <button class="button">y</button>
+        <button class="button">z</button>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

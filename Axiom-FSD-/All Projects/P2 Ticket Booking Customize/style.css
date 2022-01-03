@@ -1,0 +1,811 @@
+* {
+    box-shadow: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background:#162B32;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+
+}
+.curved h1 {
+    color:rgb(158, 223, 243);
+    font-size: 8rem;
+    text-align: center;
+    text-shadow: 0 0 20px black;
+}
+
+@media screen and (max-width: 680px) {
+    .curved h1 {
+        color:rgb(158, 223, 243);
+        font-size:10vw;
+        text-align: center;
+        text-shadow: 0 0 20px black;
+    }
+  }
+
+.movie_status  {
+    color:rgb(158, 223, 243);
+    font-size: 2.5rem;
+    margin-top:2%;
+    margin-bottom:2%;
+    display:block;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    overflow: hidden;
+    z-index:1000;
+
+
+
+}
+
+@media (max-width:700px) {
+    .movie_status  {
+        position: sticky;
+        top:0%;
+        z-index:900;
+        background:black;
+
+    }
+}
+@media (max-width:700px) {
+    #ns  {
+        position: sticky;
+        top:0%;
+        z-index:950;
+        width:100%
+
+}
+}
+@media (max-width:700px) {
+    #d3  {
+        position: sticky;
+        top:0%;
+        z-index:1000;
+        width:100%
+}
+}
+
+@media (max-width:700px) {
+    #nw  {
+        position: sticky;
+        top:0%;
+        z-index:1000000;
+        width:100%
+}
+}
+
+.now_showing , .next_week, .d3  {
+    display:flex;
+    /* background-color: rgb(31, 192, 39); */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+@media screen and (max-width: 680px) {
+    .now_showing , .next_week, .d3  {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+    }
+  }
+
+
+.front img ,.back img{
+    width: 15rem;
+    height:25rem;
+    user-select: none;
+
+}
+.back img{
+    width: 15rem;
+    height:25rem;    
+    position:absolute;
+    z-index:-7;
+    opacity: .3;
+    user-select: none;
+
+}
+/* Card Flipping Start*/
+
+.card_container {
+    position: relative;
+    width: 15rem;
+    height:25rem;
+    perspective:1000px;
+    transform-style: preserve-3d;
+    background:transparent;
+}
+
+.card {
+    position:absolute;
+    width:100%;
+    height:100%;
+    transition: all 0.5s ;
+    /* background-color: red; */
+    transform-style: preserve-3d; 
+    user-select:none;
+
+}
+@media (max-width:700px) {
+    .card_container {
+        margin-bottom: 4%;
+    }
+}
+
+.front {
+    position:absolute;
+    width: 100%;
+    height:100%;
+    backface-visibility: hidden;
+    
+}
+.back {
+    width: 100%;
+    height:100%;
+    backface-visibility: hidden;
+    background:rgba(0, 0, 0, 0.5);
+    transform:rotateY(180deg);
+
+}
+.back h2{
+    /* background-color: red; */
+    color:white;
+    text-align:center;
+    text-align:bottom;
+    margin-bottom:0%;
+    background-color: #030d29;
+    text-shadow: 1px 1px 2px black;
+    margin-top:4%;
+    font-size:1.5em;
+}
+.back p{
+    color:rgb(87, 240, 240);
+    margin-top:8rem;
+    margin-bottom:0%; 
+    margin-left:2%;
+    margin-right:2%;
+    font-size:2vh;
+    text-shadow: 1px 1px 2px black;
+    font-style: bold;
+    text-align:justify;
+    overflow-wrap: break-word;
+}
+.fa.fa-youtube {
+    background:red;
+    width:75px;
+    height:75px;
+    color:white;
+    border-radius:50%;
+    line-height: 75px;
+    text-align:center;
+    font-size:50px;
+    margin-top:10%;
+    z-index:100;
+
+}
+.fa.fa-youtube:hover {
+    transform:scale(1.3);
+    transition:1.2s;
+}
+.fa.fa-calendar-alt {
+    background:rgb(19, 121, 255);
+    width:75px;
+    height:75px;
+    color:white;
+    border-radius:50%;
+    line-height: 75px;
+    text-align:center;
+    font-size:50px;
+    margin-top:10%;
+}
+.fa.fa.fa-calendar-alt:hover {
+    transform:scale(1.3);
+    transition:1.2s;
+
+}
+.font_awesome {
+    display:flex;
+    justify-content:space-evenly;
+    align-items:space-evenly;
+    flex-direction: row;
+    color:white;
+}
+
+
+.card:hover{
+    transform:rotateY(180deg);
+    cursor: pointer;
+
+}
+
+/* Card Flipping End*/
+
+
+/* ticket cinema start here */
+
+
+ .ticket{
+     text-shadow:1px 2px 10px black;
+    position:fixed;
+    background: #1A2238;  
+    top:50%;
+    left:300%;
+    transform:translate(-50%, -50%);
+    z-index:3000000;
+    opacity:0;
+    padding:2%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:1px 2px 10px black;
+    width: 100vw;
+    height:70vh;
+}
+
+
+
+.ticket.show{
+    position:fixed;
+    background: #1A2238;  
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:3000000;
+    opacity:1;
+    padding:2%;
+
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    transition:1s all ease-out;
+    box-shadow:1px 3px 10px black;
+    width: 100vw;
+    height:70vh;
+
+}
+
+
+
+
+/* ticket cinema end here */
+
+/* ticket css start */
+
+ul {
+    display:flex;
+    justify-content:space-evenly;
+    align-items: space-evenly;
+    list-style-type: none;
+    /* background-color:rgb(0, 0, 0,.3); */
+    border-radius: 5px;
+    /* box-shadow:1px 2px 10px black; */
+    width:80vw;
+ 
+}
+small {
+    font-size:1.2rem;
+    margin-left:10px;
+
+}
+
+li {
+        display:flex;
+        justify-content:center;
+        align-items: space-around;
+        color:rgb(19, 231, 221);
+}
+li .seat{
+    height:2vh;
+    width:3vw;
+
+}
+
+.screen {
+    
+    background-color:rgb(9, 170, 17);
+    box-shadow: 1px 3px 10px;
+    width: 100vw;
+    height:70vh;
+    border-radius: 5px;
+
+
+}
+
+label {
+    font-size: 1.2rem;
+    color:aqua;
+    display: block;
+    text-shadow:1px 1px 5px black;
+    /* border:1px solid red; */
+    margin-bottom:1vh;
+
+}
+select {
+    text-align:center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    background-color: rgb(43, 236, 243);
+    width:100%;
+    text-shadow:1px 1px 0px black;
+    border-radius: 10px;
+    height:5vh;
+    margin-bottom:1vh;
+    outline: none;
+    
+}
+.ticket_container {
+    display:flex;
+    width:80vw;
+    /* border:1px solid green; */
+    justify-content:center;
+    align-items:center;
+    padding:.8vw;
+ 
+}
+.row {
+    margin:0;
+    /* border:1px solid red; */
+    margin-right:1vh;
+    margin-left:1vh;
+
+}
+.seat{
+    height:3vh;
+    width:4vw;
+    background-color:rgb(13, 66, 66); 
+    border-radius: 10px 10px 0px 0px;
+    margin-top:5px; 
+    box-shadow: 1px 1px 0px black;
+}
+
+.fa.fa-couch {
+  
+    background-color:rgb(11, 79, 105); 
+    border-radius: 10px 10px 0px 0px;
+    font-size: 3vh;
+
+}
+
+
+
+.seat.selected{
+    background-color: rgb(31, 255, 244);
+}
+
+.seat.reserved{
+    background-color: rgb(194, 194, 194);
+}
+
+
+
+
+
+.row:nth-of-type(3) {
+    margin-left:24px;
+}
+
+.row:nth-last-of-type(3) {
+    margin-right:24px;
+}
+
+
+.ticket_container .seat:not(.reserved):hover {
+    cursor: pointer;
+    /* transform:scale(1.3); */
+    /* border:1px solid  rgb(31, 255, 244); */
+}
+
+p {
+    margin-top:1vh;
+    margin-bottom:0vh;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px black;
+    color:rgb(19, 231, 221);
+
+
+}
+span {
+    color:aqua;
+    text-shadow: 2px 1px 10px black;
+    font-size: 1.5rem;
+}
+.last {
+    display:flex;
+    align-items:space-evenly;
+    justify-content:space-evenly;
+    width:100%;
+}
+.cancel,.payment {
+    width: 35vw;
+    height:5vh;
+    border-radius: 5%;
+    text-align: center;
+    line-height:5vh;
+    color:aqua;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow:1px 2px 10px rgb(0, 0, 0);
+    margin-bottom:0vh;
+    margin-top:1vh;
+}
+.cancel,.payment {
+background-color: rgb(0, 0, 0 ,0.5);
+}
+
+.reset {
+    width: 80vw;
+    height:5vh;
+    border-radius:5%;
+    text-align: center;
+    line-height:5vh;
+    color:aqua;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0 ,0.5);
+    font-size:1.2rem;
+    margin-top:1vh;
+    box-shadow:1px 1px 10px black;
+
+}
+
+.reset:hover,.payment:hover,.cancel:hover {
+ background-color: rgb(0, 0, 0 ,0.8);
+ 
+}
+
+/* ticket css end */
+
+/* media player css start here */
+.videoPlayer {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width:100vw;
+    height:45vh;
+    position: fixed;
+    top:50%;
+    left:500%;
+    transform:translate(-50%, -50%);
+    z-index:10000;
+    opacity:1;
+    box-shadow:1px 2px 10px rgb(189, 56, 56);
+}
+.fa.fa-window-close {
+    position:absolute;
+    color:rgb(0, 0, 0);
+    right:0%;
+    height: 100px;
+    font-size:5.5vw;
+    display: inline;
+    /* background-color: rgb(185, 41, 41); */
+    /* border:1px solid rgb(72, 255, 96); */
+    /* background-color:red; */
+    
+    
+} 
+
+.videoPlayer.show{
+    text-align: right;
+    background:rgb(37, 181, 238);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width:100vw;
+    height:45vh;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:10000;
+    opacity:1;
+    box-shadow:1px 2px 10px black;
+    transition:1s all ease-out;
+
+
+}
+.videoPlayer h1 {
+    position:'absolute';
+    /* display: inline; */
+    text-align: center;
+    color:rgb(5, 25, 37);
+	text-shadow: 1px 1px 1px,1px 1px 2px rgb(0, 0, 0);
+	color:rgb(8, 16, 65); 
+	opacity: 1;
+    font-size: 8vw;
+    text-shadow: 2px 1px 1px black;
+    /* border:1px solid red; */
+
+}
+.window {
+    top:50%;
+    left:50%;
+    cursor:pointer;
+    width:100vw;
+    height:45vh;
+    background:rgb(0, 0, 0);
+    width:inherit;
+    height:inherit;
+    margin-bottom:-5px;
+
+
+}
+.controls {
+    background:rgb(37, 181, 238);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:rgb(6, 5, 97);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width:100vw;
+    height:7vh;
+}
+
+.progress {
+    width:100%;
+
+}
+
+.fa.fa-play ,.fa.fa-stop, .fa.fa-pause {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    line-height: 45px;
+    text-align:center;
+    font-size:25px;
+    background:transparent  ;
+
+}
+
+
+.fa.fa-play  {
+    background:#0e5c0e;
+}
+
+.fa.fa-stop  {
+    background:rgb(156, 19, 1);
+}
+
+.fa.fa-pause  {
+    background:rgba(0, 158, 8, 0.295);
+
+    
+}
+
+
+
+.controls .btn {
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:rgb(206, 206, 206);
+    padding:4px;
+}
+
+
+
+.timestamp {
+    padding:3px;
+    cursor:pointer;
+    color:rgb(15, 17, 134);
+
+}
+/* media player css end here */
+
+
+@media screen and (min-width: 680px) {
+    
+    .ticket.show,.ticket,.select,.reset {
+        width:60vw;
+        
+
+    }
+
+
+
+    ul {
+
+        
+        width:1vw;
+        margin-top:2vh;
+        margin-bottom:5vh;
+
+
+
+
+    }
+
+    .screen,.reset{
+        width:20vw;
+        margin-top:3vh;
+
+
+    }
+    .ticket_container {
+        width:20vw;
+        /* border:1px solid red; */
+
+
+
+    }
+    .last {
+    width:20vw;
+    /* border:1px solid green; */
+    justify-content:space-evenly;
+    align-items:space-evenly;
+    padding:.8vw;
+    /* border:1px solid red; */
+
+    }
+    .payment {
+        margin-right:2vw;
+    }
+    .seat{
+        height:2vh;
+        width:1vw;
+        
+    }
+    li .seat{
+        height:2vh;
+        width:1vw;
+    
+    }
+    .cancel,.payment {
+        width: 10vw;
+        height:5vh;
+        margin-bottom:2vh;
+        margin-top:2vh;
+
+         }
+
+/* video player responsive */
+.videoPlayer {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width:50vw;
+    height:45vh;
+    position: fixed;
+    top:50%;
+    left:500%;
+    transform:translate(-50%, -50%);
+    z-index:10000;
+    opacity:1;
+    box-shadow:1px 2px 10px rgb(189, 56, 56);
+}
+.fa.fa-times-circle {
+    position:absolute;
+    color:rgb(0, 0, 0);
+    /* text-align: center; */
+    padding:5px;
+    right:0%;
+    top:0%;
+    margin-bottom:90%;
+    
+} 
+
+.videoPlayer.show{
+    text-align: right;
+    background:rgb(37, 181, 238);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width:50vw;
+    height:45vh;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:10000;
+    opacity:1;
+    box-shadow:1px 2px 10px black;
+    transition:1s all ease-out;
+
+
+}
+.videoPlayer h1 {
+    position:'absolute';
+    /* display: inline; */
+    text-align: center;
+    color:rgb(5, 25, 37);
+	text-shadow: 1px 1px 1px,1px 1px 2px rgb(0, 0, 0);
+	color:rgb(8, 16, 65); 
+	opacity: 1;
+    font-size: 4vw;
+    text-shadow: 2px 1px 1px black;
+
+}
+.window {
+    top:50%;
+    left:50%;
+    cursor:pointer;
+    width:50vw;
+    height:45vh;
+    background:rgb(0, 0, 0);
+    width:inherit;
+    height:inherit;
+    margin-bottom:-5px;
+
+
+}
+.controls {
+    background:rgb(37, 181, 238);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:rgb(6, 5, 97);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width:50vw;
+    height:7vh;
+}
+
+.progress {
+    width:100%;
+
+}
+
+.fa.fa-play ,.fa.fa-stop, .fa.fa-pause {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    line-height: 45px;
+    text-align:center;
+    font-size:25px;
+    background:transparent  ;
+
+}
+
+
+.fa.fa-play  {
+    background:#0e5c0e;
+}
+
+.fa.fa-stop  {
+    background:rgb(156, 19, 1);
+}
+
+.fa.fa-pause  {
+    background:rgba(0, 158, 8, 0.295);
+
+    
+}
+
+
+
+.controls .btn {
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:rgb(206, 206, 206);
+    padding:4px;
+}
+
+
+
+.timestamp {
+    padding:3px;
+    cursor:pointer;
+    color:rgb(15, 17, 134);
+
+}
+small {
+    font-size:1rem;
+    margin-right:.8rem;
+    margin-top:1vh;
+
+}
+.fa.fa-window-close {
+    position:absolute;
+    color:rgb(0, 0, 0);
+    right:0;
+    top:0;
+    font-size:2.5vw;
+
+/* media player css end here */
+
+  }

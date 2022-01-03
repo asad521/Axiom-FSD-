@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Farro', sans-serif;
+    text-shadow: 0px 0px 1px black;
+
+}
+ 
+body {
+    background-color:blueviolet;
+    color:black;
+    background: #5c258d; /* fallback for old browsers */
+    background: linear-gradient(to right, #5cDB95, #4389a2); 
+    
+}
+p,h1 {
+    margin:1em;
+    text-align: center;
+    color:black;
+}
+
+
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items: space-between;
+    /* border:1px solid red; */
+    width:90%;
+    /* width:max(100%,100%) */
+    padding:.5em;
+    margin:.5em;
+    /* background-color: blueviolet; */
+    /* border:1px solid red; */
+}
+
+select,input {
+    height:2.5rem;
+    width:8rem;
+    border-radius: 5%;
+}
+    #text {
+        margin-top:1em;
+        color:rgb(43, 238, 189);
+        text-shadow: 1px 1px 10px black;
+        /* font-size: clamp(14px,2vw,10vw); */
+        /* font-size: calc(4vw +.5rem); */
+
+
+    }
+
+.currencyExchangeCalculator {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column ;
+    margin:0 auto;
+
+}
+button {
+    height:3rem;
+    width:8rem;
+    border-radius: 5%;
+    background-color:#05386B;
+    color:white;
+}
+.pakCurrencyBtn {
+    width:max-content;
+    padding:10px;
+}
+.pakCurrencyContainer {
+    position:relative;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color:rgba(243, 152, 77, 0.911);
+    margin:10px 5px;
+    text-align: center;
+    vertical-align: middle;
+
+
+}
+.elementt{
+    border:1px solid rgb(34, 33, 33);
+    display:block;
+
+}
+
+@media(max-width: 500px) {
+    body {
+        background-color:blueviolet;
+        color:black;
+        background: #5c258d; /* fallback for old browsers */
+        background: linear-gradient(to right, #2e14c0, #4cc0eb); 
+        margin:0;
+        padding:0;
+
+    }
+    .pakCurrencyContainer {
+        position:relative;
+        display:grid;
+        grid-template-columns: auto auto ;
+        background-color:rgba(243, 152, 77, 0.911);
+        margin:10px 5px;
+
+    
+    }
+ 
+    h1 {
+        color:black;
+        font-size: 2rem;
+        color:rgb(20, 255, 255);
+        text-shadow: 2px 1px 20px black;
+
+    }
+    p {
+        margin:.4em;
+        color:rgba(253, 253, 253, 0.925);
+        font-size: 1rem;  
+        text-shadow: 1px 1px 40px black;
+      
+        
+    }
+    
+    
+    .container {
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        width:90vw;
+        padding:.5em;
+        margin:0;
+        /* border:1px solid red; */
+    }
+
+
+    select,input {
+        margin-bottom:.5rem;
+        height:2.5rem;
+        width:100%;
+        border-radius: 5%;
+
+    }
+    
+    .currencyExchangeCalculator {
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column ;
+    
+    }
+    button {
+        height:3rem;
+        width:90%;
+        border-radius: 5%;
+    }
+
+
+    }
+
+
+
+
+
+
+
